@@ -2,6 +2,7 @@ angular.module('mainApp')
 
   // promise foursquare
   .factory('dataService', function ($http) {
+
     var clientId = 'NOMTFMQBL1FV34UIYMEC0AOM0F11X2D0NXQOXTB15X4XHXRT'
     var clientSecret = 'I21LTBGGQSNUZXIR3AUSSZTVN0ASR15C43JDA4TGFMGHB3VC'
 
