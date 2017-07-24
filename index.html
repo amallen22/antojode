@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<ul class="nav navbar-nav">
+				<li><a href="#!/apiTry">Api Try </a></li>
+			</ul>
+		</div><!-- /.container -->
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<ng-view></ng-view>
+		</div>
+	</div>	
+	
+
+
+
+	<!-- cdn angular, jquery, bootsrap -->
+	<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script>
+
+	<!-- main module -->
+	<script src="js/app.js"></script>
+
+	<!-- dataServices -->
+	<script src="js/services/dataService.js"></script>
+
+	<!-- api try -->
+	<script src="js/routes/apiTry/controller.js"></script>
+	<script src="js/routes/apiTry/index.js"></script>
+
+
+</body>
+</html>
