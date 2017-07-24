@@ -1,7 +1,6 @@
 <div class="container">
-	<h1>{{ section }}</h1>
+	<h1>{{ localData.title }}</h1>
 	<ul>
-		<li><a href="Categorie 1"></a></li>
-		<li><a href="Categorie 2"></a></li>
+		<li ng-repeat="data in subCategory"><a href="#">{{data.type}}</a></li>
 	</ul>
 </div>
