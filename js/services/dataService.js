@@ -7,8 +7,8 @@ angular.module('mainApp')
     var userPosition = '41.4814535, 2.3276007' //latitude longitude
    
 
-    function getConfig () {
-      var url = 'https://api.foursquare.com/v2/venues/explore?client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20130815&ll='+userPosition+'&radius=5000&query='
+    function getConfig (clientService) {
+      var url = 'https://api.foursquare.com/v2/venues/explore?client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20130815&ll='+userPosition+'&radius=5000&query='+clientService
       return $http.get(url)
     }
     return {
