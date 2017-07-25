@@ -1,28 +1,43 @@
 angular.module('mainApp')
-.controller('listController', function($scope, dataService){
-	$scope.section = "LIST"
+    .controller('listController', function($scope,dataService) {
+        $scope.section = "LIST"
 
-	dataService.getSubId(subId)
-	.then(function(config){
-		console.log(config)
-	})	
+        var subId = $
 
-})
+        dataService.getSubId(subId)
+        .then(function(config){
+        	console.log(config)
+        })	
+
+    })
+
+// (function() {
+
+//   window.getRepos = getRepos
+
+//   function getRepos( username ) {
+//     var url = 'http://api.github.com/users/' + username +'/repos'
+//     return $.ajax({ url: url }) // return a promise
+//   }
+
+// })()
 
 
-//// (function () {
-//   $(document).on('albumSelection', function (e, idAlbum) {
-//     SpotifyService.getTracks(idAlbum)
-//       .then(function (oData) {
-//         var liTemplate = '<li><a target="_blank" href="<%URL%>"><%NAME%></a></li>'
-//         var aLisTracks = oData.items.map(function (oTrack) {
-//           return liTemplate
-//             .replace('<%URL%>', oTrack.preview_url)
-//             .replace('<%NAME%>', oTrack.name)
+// function() {
+
+//   $(document).on("usernameReady", function(e, username) {
+
+//     getRepos(username)
+//       .then(function(aRepos) {
+
+//         var lisRepos = aRepos.map(function(oRepo) {
+//           return '<li>' + oRepo.name + '</li>'
 //         })
 
-//         $('#tracks-list ul').html(aLisTracks.join(''))
-//         $('#tracks-list').removeClass('hidden')
+//         $("#list-repos").html(lisRepos.join(''))
+
 //       })
-//   })
+
+//   });
+
 // })()
