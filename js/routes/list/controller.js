@@ -12,7 +12,7 @@ angular.module('mainApp')
          var query = queryCategory + " " + querySubCategory
          
 		
-		dataService.getConfig()
+		dataService.getConfig(query)
 		.then(function (config) {
 			console.log(config)
 		})
