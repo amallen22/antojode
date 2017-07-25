@@ -15,6 +15,7 @@ angular.module('mainApp')
     }
   })
 
+
   // promise local
   .factory('localData', function () {
     var localData = [
