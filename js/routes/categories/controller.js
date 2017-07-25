@@ -7,5 +7,5 @@ angular.module('mainApp')
   $scope.localData = localData[categoryId]
   $scope.subCategory = localData[categoryId].subCategory
 
-  console.log($routeParams)
+  console.log(localData[categoryId])
 })

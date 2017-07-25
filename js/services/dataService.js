@@ -22,15 +22,10 @@ angular.module('mainApp')
       {
         id: 0,
         title: 'Desayuno',
-        subCategory: [{
-          
-          id: 01,
-          type: 'Dulce'
-        },
-        {
-          id: 02,
-          type: 'Salado'
-        }]
+        subCategory: [
+          { id: 01, type: 'Dulce' },
+          { id: 02, type: 'Salado' }
+        ]
       },
       {
         id: 1,

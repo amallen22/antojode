@@ -4,6 +4,7 @@ angular.module('mainApp')
   $scope.section = 'Vissont'
 
   $scope.localData = localData
+
   // added marc
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -15,3 +16,5 @@ angular.module('mainApp')
   }
   // end added marc
 })
+
+// podemos añadir 'location' como parametro en la funcion  para añadir rutas

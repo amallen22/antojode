@@ -1,14 +1,11 @@
 angular.module('mainApp')
-    .controller('listController', function($scope,dataService) {
-        $scope.section = "LIST"
+    .controller('listController', function ($scope) {
+      $scope.section = 'LIST'
 
-        var subId = $
-
-        dataService.getSubId(subId)
-        .then(function(config){
-        	console.log(config)
-        })	
-
+        // dataService.getSubId(subId)
+        // .then(function(config){
+        // 	console.log(config)
+        // })
     })
 
 // (function() {
@@ -21,7 +18,6 @@ angular.module('mainApp')
 //   }
 
 // })()
-
 
 // function() {
 
