@@ -1,5 +1,5 @@
 angular.module('mainApp')
-.controller('categoriesController', function ($scope, $routeParams, localData) {
+.controller('categoriesController', function ($scope, $routeParams, localData, dataService) {
   var categoryId = $routeParams.id
 
   $scope.categoryId = $routeParams.id
@@ -7,5 +7,6 @@ angular.module('mainApp')
   $scope.localData = localData[categoryId]
   $scope.subCategory = localData[categoryId].subCategory
 
-  console.log(localData[categoryId])
+  // Enviar la categoria a dataService
+  $scope.queryCategory = localData[categoryId].title
 })
