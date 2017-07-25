@@ -1,1 +1,1 @@
-angular.module('mainApp', ['ngRoute'])
+angular.module('mainApp', ['ngRoute', 'ngMap'])
