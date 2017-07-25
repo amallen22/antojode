@@ -1,5 +1,6 @@
 angular.module('mainApp')
-.controller('homeController', function($scope, dataService){
-	$scope.section = "Vissont"
-	
+.controller('homeController', function ($scope, localData) {
+  $scope.section = 'Vissont'
+
+  $scope.localData = localData
 })

@@ -1,7 +1,7 @@
 angular.module('mainApp')
 .config(function ($routeProvider) {
   $routeProvider
-	.when('/:id', {
+	.when('/categories/:id', {
 	  templateUrl: 'js/routes/categories/template.html',
 	  controller: 'categoriesController'
 })
