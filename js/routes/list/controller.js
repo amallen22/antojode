@@ -1,43 +1,22 @@
 angular.module('mainApp')
-    .controller('listController', function($scope,dataService) {
+    .controller('listController', function($scope, $routeParams, dataService, localData) {
         $scope.section = "LIST"
 
-        var subId = $
+         var catId = $routeParams.catId
+         var subId = $routeParams.subId
+         
+         var queryCategory = localData[catId].title
+         var querySubCategory = localData[catId].subCategory[subId].type
+         
+         // esta query tiene que llegar al dataService para recojer parametro
+         var query = queryCategory + " " + querySubCategory
+         
+		
+		dataService.getConfig()
+		.then(function (config) {
+			console.log(config)
+		})
 
-        dataService.getSubId(subId)
-        .then(function(config){
-        	console.log(config)
-        })	
+        
 
     })
-
-// (function() {
-
-//   window.getRepos = getRepos
-
-//   function getRepos( username ) {
-//     var url = 'http://api.github.com/users/' + username +'/repos'
-//     return $.ajax({ url: url }) // return a promise
-//   }
-
-// })()
-
-
-// function() {
-
-//   $(document).on("usernameReady", function(e, username) {
-
-//     getRepos(username)
-//       .then(function(aRepos) {
-
-//         var lisRepos = aRepos.map(function(oRepo) {
-//           return '<li>' + oRepo.name + '</li>'
-//         })
-
-//         $("#list-repos").html(lisRepos.join(''))
-
-//       })
-
-//   });
-
-// })()
