@@ -1,9 +1,9 @@
 angular.module('mainApp')
-.controller('categoriesController', function ($scope, dataService) {
-  $scope.section = 'Categories'
+.controller('categoriesController', function ($scope, $routeParams, localData) {
+  var categoryId = $routeParams.id
 
-  dataService.getConfig()
-	.then(function (config) {
-  console.log(config)
-})
+  $scope.localData = localData[categoryId]
+  $scope.subCategory = localData[categoryId].subCategory
+
+  console.log(localData[categoryId])
 })
