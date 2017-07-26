@@ -1,11 +1,12 @@
 <div class="container">
 	<h1>{{ section }}</h1>
-	<ol>
-		<li ng-repeat="item in items">
-			<h3>{{ item.venue.name }}</h3>
-			<h5>{{ item.venue.id }}</h5>
+	<ul class="flex-list">
+		<li class="flex-save" ng-repeat="item in items">
+			<h3><a href="#!/categories/{{cat.id}}/subCategory/{{sub.id}}/details" ></a>{{ item.venue.name }}</h3>
+			<h5>{{ item.venue.categories[0].pluralName }}</h5>
+			<!-- <h5>{{ item.venue.id }}</h5>
 			<h5>{{ item.venue.location.lat }}</h5>
-			<h5>{{ item.venue.location.lng }}</h5>
+			<h5>{{ item.venue.location.lng }}</h5> -->
 		</li>
-	</ol>
+	</ul>
 </div>

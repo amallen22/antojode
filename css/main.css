@@ -69,4 +69,16 @@
         text-decoration: none;
         color: black; }
 
+.flex-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  list-style: none; }
+
+.flex-save {
+  border: 2px solid red;
+  margin-top: 10px; }
+
 /*# sourceMappingURL=main.css.map */
