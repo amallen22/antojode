@@ -1,0 +1,43 @@
+<div class="container">
+	<h1>{{ section }}</h1>
+
+	<ng-map default-style="true" center="41.389843677977325, 2.1799007361498184" zoom="13">
+		<marker ng-repeat="item in items" id='{{venue.id}}' position="41.389843677977325, 2.1799007361498184" on-click="vm.showDetail(shop)">
+
+			<!-- comment MARKER WITH ON-CLICK EVENT AND DINAMIC POSITION FROM POSITION VENUES-->
+			<!--<marker ng-repeat="item in items" id='{{item.venue.id}}' position="{{ item.venue.location.lat}}, {{venue.location.lng}} ">-->
+
+		</marker>
+
+		<!-- SHOW INFO WHEN CLICK ON ICON -->
+		<!--<info-window id="{{venue.id}}">
+			<div ng-non-bindable="">
+				
+				<a href="#" ng-click="vm.clicked()">Click Here</a>
+			</div>
+		</info-window>-->
+	</ng-map>
+
+	<!-- // ICON CLICKABLE SHOW INFO-WINDOW -->
+	<!-- <button ng-click="vm.showDetail(e, vm.shop)">
+		show InfoWindow of the shop
+	</button> -->
+
+<!-- 
+	<figure ng-controller=“MapCtrl”>
+		<gmap></gmap>
+		<map-marker ng-repeat=“location in locations” ng-style=“{‘background-color’:location.color}”></map-marker>
+	</figure> -->
+
+
+	<ol>
+		<li ng-repeat="item in items">
+			<h3>{{ item.venue.name }}</h3>
+			<h5>{{ item.venue.id }}</h5>
+			<h5>{{ item.venue.location.lat }}</h5>
+			<h5>{{ item.venue.location.lng }}</h5>
+		</li>
+	</ol>
+
+
+</div>
