@@ -18,7 +18,8 @@ angular.module('mainApp')
     // console.log(position)
     dataService.getConfig(query, ll)
     .then(function (config) {
-      console.log(config.data.response.groups['0'].items)
+      console.log(config)
+      // console.log(config.data.response.groups['0'].items)
       $scope.items = config.data.response.groups[0].items
 
       // $scope.lat = config.data.response.groups[0].items.veniu.location.lat

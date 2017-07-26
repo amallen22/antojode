@@ -7,7 +7,8 @@ angular.module('mainApp')
     var userPosition = '41.398362999999996, 2.1999963' // latitude longitude
 
     function getConfig (query, ll) {
-      var url = 'https://api.foursquare.com/v2/venues/explore?client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20130815&ll=' + ll + '&radius=5000&section=food&limit=10&query=sushi'
+      var url = 'https://api.foursquare.com/v2/venues/explore?client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20130815&ll=' + ll + '&radius=3000&section=&limit=10&query=' + query
+
       return $http.get(url)
     }
     return {
@@ -28,13 +29,13 @@ angular.module('mainApp')
       },
       {
         id: 1,
-        title: 'Almuerzo',
+        title: 'Comida',
         subCategory: [
       {id: 0, type: 'Take Away'},
-      {id: 1, type: 'Mar'},
-      {id: 2, type: 'Montaña'},
+      {id: 1, type: 'Pescado'},
+      {id: 2, type: 'Carne'},
       {id: 3, type: 'Vegetariano'},
-      {id: 4, type: 'Exótico'}
+      {id: 4, type: 'Etnico'}
         ]
       },
       {
@@ -42,10 +43,10 @@ angular.module('mainApp')
         title: 'Cena',
         subCategory: [
       {id: 0, type: 'Take Away'},
-      {id: 1, type: 'Mar'},
-      {id: 2, type: 'Montaña'},
+      {id: 1, type: 'Pescado'},
+      {id: 2, type: 'Carne'},
       {id: 3, type: 'Vegetariano'},
-      {id: 4, type: 'Exótico'}
+      {id: 4, type: 'Etnico'}
         ]
       },
       {
