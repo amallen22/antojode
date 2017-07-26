@@ -6,8 +6,8 @@ angular.module('mainApp')
     var clientSecret = 'I21LTBGGQSNUZXIR3AUSSZTVN0ASR15C43JDA4TGFMGHB3VC'
     var userPosition = '41.398362999999996, 2.1999963' // latitude longitude
 
-    function getConfig (clientService) {
-      var url = 'https://api.foursquare.com/v2/venues/explore?client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20130815&ll=' + userPosition + '&radius=3000&section=food&limit=5&query=' + clientService
+    function getConfig (query, ll) {
+      var url = 'https://api.foursquare.com/v2/venues/explore?client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20130815&ll=' + ll + '&radius=3000&section=food&limit=10&query=' + query
       return $http.get(url)
     }
     return {
@@ -60,11 +60,13 @@ angular.module('mainApp')
         id: 5,
         title: 'Copas'
       }
+
     ]
 
     return localData
   })
 
+  // STATIC LOCATION DATA
   // .factory(‘locationsModel’, function() {
   //   const locationsModel = [{
   //     name: ‘Wilshire Country Club’,
