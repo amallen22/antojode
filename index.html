@@ -53,6 +53,10 @@
 	<script src="js/routes/list/controller.js"></script>
 	<script src="js/routes/list/index.js"></script>
 
+	<!-- map -->
+	<script src="js/routes/map/controller.js"></script>
+	<script src="js/routes/map/index.js"></script>
+
 	<!-- home -->
 	<script src="js/routes/home/controller.js"></script>
 	<script src="js/routes/home/index.js"></script>
@@ -60,39 +64,5 @@
 	<!-- categories -->
 	<script src="js/routes/categories/controller.js"></script>
 	<script src="js/routes/categories/index.js"></script>
-
-	<script type="text/javascript">
-		angular.module('ngMap').controller('MyCtrl', function(NgMap) {
-		  var vm = this
-		  
-		  NgMap.getMap().then(function(map) {
-		    console.log('map', map)
-		    vm.map = map
-		  })
-//
-		  vm.clicked = function() {
-		    alert('Clicked a link inside infoWindow');
-		  };
-
-		  vm.shops = [
-		    {id:'foo', name: 'FOO SHOP', position:[41,-87]},
-		    {id:'bar', name: 'BAR SHOP', position:[42,-86]}
-		  ];
-		  vm.shop = vm.shops[0];
-//
-		  vm.showDetail = function(e, shop) {
-		    vm.shop = shop;
-		    vm.map.showInfoWindow('foo-iw', shop.id);
-		  };
-//
-		  vm.hideDetail = function() {
-		    vm.map.hideInfoWindow('foo-iw');
-		  };
-		});
-
-	</script>
-
-	
-
 </body>
 </html>

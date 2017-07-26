@@ -1,5 +1,5 @@
 angular.module('mainApp')
-.controller('listController', function ($scope, $routeParams, dataService, localData) {
+.controller('mapController', function ($scope, $routeParams, dataService, localData) {
   var catId = $routeParams.catId
   var subId = $routeParams.subId
   var queryCategory = localData[catId].title
@@ -9,32 +9,51 @@ angular.module('mainApp')
 
   $scope.section = query
 
+  // get user geolocalitation
   navigator.geolocation.getCurrentPosition(function (position) {
     var latitude = position.coords.latitude
     var longitude = position.coords.longitude
     var ll = latitude + ', ' + longitude
+    $scope.ll
 
-    console.log(position)
+    // console.log(position)
     dataService.getConfig(query, ll)
     .then(function (config) {
-      // console.log(config.data.response.groups['0'].items)
       $scope.items = config.data.response.groups[0].items
 
-      // $scope.lat = config.data.response.groups[0].items.veniu.location.lat
-      // console.log(config.data.response.groups['0'].items[3].venue.location.lat)
-      // console.log(config.data.response.groups['0'].items[3].venue.location.lng)
+    // make markers clickable
+
+      $scope.showDetail = function (e, items) {
+        $scope.items = items
+        $scope.map.showInfoWindow('infow', items)
+      }
     })
   })
 
-      // controller para mapa
-      // .controller(‘MapCtrl’, function($scope, $element, locationsModel) {
-      //  const mapEl = $element.find(‘gmap’)[0]
-      //  const mapOptions = {
-      //    zoom: 10,
-      //    center: {lat: 41.398362999999996, lng: 2.1999963}
-      //  };
-      //  const gmap = new google.maps.Map(mapEl, mapOptions);
-      //  $scope.gmap = gmap;
-      //  $scope.locations = locationsModel;
-      // })
+//     angular.module('ngMap').controller('MyCtrl', function(NgMap) {
+
+//       NgMap.getMap().then(function(map) {
+//         console.log('map', map)
+//         $scope.map = map
+//       })
+// //
+//       $scope.clicked = function() {
+//         alert('Clicked a link inside infoWindow');
+//       };
+
+//       $scope.shops = [
+//         {id:'foo', name: 'FOO SHOP', position:[41,-87]},
+//         {id:'bar', name: 'BAR SHOP', position:[42,-86]}
+//       ];
+//       $scope.shop = $scope.shops[0];
+// //
+//       $scope.showDetail = function(e, shop) {
+//         $scope.shop = shop;
+//         $scope.map.showInfoWindow('foo-iw', shop.id);
+//       };
+// //
+//       $scope.hideDetail = function() {
+//         $scope.map.hideInfoWindow('foo-iw');
+//       };
+//     });
 })

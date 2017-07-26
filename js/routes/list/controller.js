@@ -9,12 +9,13 @@ angular.module('mainApp')
 
   $scope.section = query
 
+  // get user geolocalitation
   navigator.geolocation.getCurrentPosition(function (position) {
     var latitude = position.coords.latitude
     var longitude = position.coords.longitude
     var ll = latitude + ', ' + longitude
 
-    console.log(position)
+    // console.log(position)
     dataService.getConfig(query, ll)
     .then(function (config) {
       // console.log(config.data.response.groups['0'].items)
@@ -25,16 +26,4 @@ angular.module('mainApp')
       // console.log(config.data.response.groups['0'].items[3].venue.location.lng)
     })
   })
-
-      // controller para mapa
-      // .controller(‘MapCtrl’, function($scope, $element, locationsModel) {
-      //  const mapEl = $element.find(‘gmap’)[0]
-      //  const mapOptions = {
-      //    zoom: 10,
-      //    center: {lat: 41.398362999999996, lng: 2.1999963}
-      //  };
-      //  const gmap = new google.maps.Map(mapEl, mapOptions);
-      //  $scope.gmap = gmap;
-      //  $scope.locations = locationsModel;
-      // })
 })
