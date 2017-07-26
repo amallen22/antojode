@@ -1,9 +1,12 @@
-<div class="container">
-	<h1>{{ localData.title }}</h1>
-	<ul>
-		<li ng-model="showCategoryName" ng-repeat="data in subCategory">
+<div class="category">
+	<h1 class="text-center">{{ localData.title }}</h1>
+	<p class="text-center">Frase a Gusto de Marc</p>
+	<div>
+	<ul class="category-flex">
+		<li class="flex-item" ng-model="showCategoryName" ng-repeat="data in subCategory">
 			<a ng-href="#!categories/{{categoryId}}/subcategory/{{data.id}}">{{data.type}}</a>
 		</li>
 
 	</ul>
+</div>
 </div>

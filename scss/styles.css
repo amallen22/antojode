@@ -1,0 +1,11 @@
+ body {
+  background: blue;
+  color: white; }
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: white; }
+
+/*# sourceMappingURL=styles.css.map */
