@@ -1,27 +1,19 @@
 <div class="container">
 	<h1>{{ section }}</h1>
+	<ng-map default-style="false" center="{{ll}}" zoom="14">
+		<!-- comment MARKER WITH ON-CLICK EVENT AND DINAMIC POSITION FROM POSITION itemS-->
 
-	<ng-map default-style="true" center="{{ll}}" zoom="13">
-		<!-- comment MARKER WITH ON-CLICK EVENT AND DINAMIC POSITION FROM POSITION VENUES-->
-		<marker ng-repeat="item in items" id='{{item.venue.id}}' position="
-		{{ item.venue.location.lat}}, {{item.venue.location.lng}} "
-		on-click="showDetail(item)">
+		<div ng-repeat="item in items">
+		<marker id="item{{$index}}" animation="DROP" position="{{ item.venue.location.lat}}, {{item.venue.location.lng}}"	on-click="map.showInfoWindow('info{{$index}}')"></marker>
 
-		</marker>
-
-		<!-- SHOW INFO WHEN CLICK ON ICON -->
-		<info-window id="infow">
-			<div ng-non-bindable="">
-				<p>{{items.venue.name}}</p>
-				<!-- <a href="#" ng-click="vm.clicked()">Click Here</a> -->
-			</div>
-		</info-window>
+			<!-- SHOW INFO WHEN CLICK ON ICON -->
+			<info-window id="info{{$index}}">
+				<div>
+					<p>{{item.venue.name}}</p>
+					<a href="/categories/{{catId}}/subcategory/{{subId}}/detail/{{item.venue.id}}">Click Here</a> 
+				</div>
+			</info-window>
+		</div>
 	</ng-map>
 
-	<!-- // ICON CLICKABLE SHOW INFO-WINDOW -->
-	<!-- 
-	<figure ng-controller=“MapCtrl”>
-		<gmap></gmap>
-		<map-marker ng-repeat=“location in locations” ng-style=“{‘background-color’:location.color}”></map-marker>
-	</figure> -->
 </div>

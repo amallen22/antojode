@@ -1,5 +1,5 @@
 angular.module('mainApp')
-.controller('detailController', function ($scope, $routeParams, dataService, localData) {
+.controller('listController', function ($scope, $routeParams, dataService, localData) {
   var catId = $routeParams.catId
   var subId = $routeParams.subId
   var queryCategory = localData[catId].title
@@ -10,24 +10,15 @@ angular.module('mainApp')
   $scope.section = query
 
   // get user geolocalitation
-  navigator.geolocation.getCurrentPosition(function (position) {
-    var latitude = position.coords.latitude
-    var longitude = position.coords.longitude
-    var ll = latitude + ', ' + longitude
-
-    var detail = $routeParams.title
 
     // console.log(position)
-    dataService.getConfig(query, ll)
+  dataService.getConfig(query, ll)
     .then(function (config) {
-      console.log(config)
-      console.log(config.data.response.groups[0].items[0].venue.name)
-      $scope.items = config.data.response.groups[0].items.venue
-      // $scope.name = config.data.response.groups[0].items.venue.name
+      console.log(config.data.response.groups['0'].items)
+      $scope.items = config.data.response.groups[0].items
 
       // $scope.lat = config.data.response.groups[0].items.veniu.location.lat
       // console.log(config.data.response.groups['0'].items[3].venue.location.lat)
       // console.log(config.data.response.groups['0'].items[3].venue.location.lng)
     })
-  })
 })
