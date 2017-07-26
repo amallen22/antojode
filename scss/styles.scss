@@ -1,9 +1,29 @@
 $brand: #ffb399;
 
 body{
-    background: brand;
+    background-color: $brand;
+}
+// Navbar header
+
+header h1 {
+    a:link {
+        background: url('../img/logo_antojo-de.png') no-repeat center center;
+        background-size: 100%;
+        display: block;
+        height: 72px;
+        margin: 0 auto;
+        text-indent: -9999px;
+        width: 150px;
+    }   
+}
+[class^="pe-is-f-"], [class*=" pe-is-f-"] {
+    font-size: 3em;
+
 }
 
+
+
+// model box categories pages
 .category-flex {
     padding: 0;
     margin: 0;

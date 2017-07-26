@@ -1,9 +1,9 @@
 <div class="home">
-	<h1>{{section}}</h1>
-	<h3>Frase a gusto de alex...</h3>
-	<div class="container-fluid">
+	<div class="container">
 		<ul>
-			<li ng-repeat="cat in localData"><a href="#!/categories/{{cat.id}}">{{cat.title}}</a></li>
+			<li ng-repeat="cat in localData">
+				<a href="#!/categories/{{cat.id}}"><span class="{{cat.style}}"></span>{{cat.title}}</a>
+			</li>
 		</ul>
 	</div>
 </div>

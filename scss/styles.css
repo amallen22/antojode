@@ -1,6 +1,99 @@
- body {
-  background: blue;
-  color: white; }
+body {
+  background-color: #ffb399; }
 
+header h1 a:link {
+  background: url("../img/logo_antojo-de.png") no-repeat center center;
+  background-size: 100%;
+  display: block;
+  height: 72px;
+  margin: 0 auto;
+  text-indent: -9999px;
+  width: 150px; }
+
+[class^="pe-is-f-"], [class*=" pe-is-f-"] {
+  font-size: 3em; }
+
+.category-flex {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-between; }
+
+.flex-item {
+  background: white;
+  border: 2px solid red;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center; }
+
+@media (max-width: 320px) {
+  .flex-item {
+    width: 50%;
+    font-size: 1em; } }
+@media (max-width: 480px) {
+  .flex-item {
+    width: 50%;
+    font-size: 1em; } }
+@media (max-width: 768px) {
+  .flex-item {
+    width: 45%; } }
+@media (max-width: 990px) {
+  .flex-item {
+    width: 45%; } }
+@media (max-width: 1400px) {
+  .flex-item {
+    width: 48%;
+    margin-top: 15px; } }
+.home h1 {
+  text-align: center; }
+.home h3 {
+  text-align: center; }
+.home div {
+  text-align: center; }
+  .home div ul {
+    margin: 0 auto;
+    padding: 0;
+    border: 2px solid green;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around; }
+    .home div ul li {
+      width: 50%;
+      border: 1px solid red;
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 40px; }
+      .home div ul li a {
+        text-decoration: none;
+        color: black; }
+
+.flex-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  list-style: none; }
+
+.flex-save {
+  border: 2px solid red;
+  margin-top: 10px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -22,6 +22,7 @@ angular.module('mainApp')
       {
         id: 0,
         title: 'Desayuno',
+        style: 'pe-is-f-bread-1',
         subCategory: [
       {id: 0, type: 'Dulce' },
       {id: 1, type: 'Salado' }

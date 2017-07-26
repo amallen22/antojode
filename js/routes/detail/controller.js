@@ -2,6 +2,7 @@ angular.module('mainApp')
 .controller('listController', function ($scope, $routeParams, dataService, localData) {
   var catId = $routeParams.catId
   var subId = $routeParams.subId
+  var venueId = $routeParams.venueId
   var queryCategory = localData[catId].title
   var querySubCategory = localData[catId].subCategory[subId].type
   // esta query tiene que llegar al dataService para recojer parametro
