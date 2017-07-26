@@ -1,9 +1,8 @@
 angular.module('mainApp')
-.config(function($routeProvider){
-	$routeProvider
+.config(function ($routeProvider) {
+  $routeProvider
 	.when('/', {
-		templateUrl: 'js/routes/home/template.html',
-		controller: 'homeController'
-	})
+  templateUrl: 'js/routes/home/template.html',
+  controller: 'homeController'
 })
-
+})
