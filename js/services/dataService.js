@@ -7,7 +7,7 @@ angular.module('mainApp')
     var userPosition = '41.398362999999996, 2.1999963' // latitude longitude
 
     function getConfig (query, ll) {
-      var url = 'https://api.foursquare.com/v2/venues/explore?client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20130815&ll=' + ll + '&radius=3000&section=food&limit=10&query=' + query
+      var url = 'https://api.foursquare.com/v2/venues/explore?client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20130815&ll=' + ll + '&radius=5000&section=food&limit=10&query=sushi'
       return $http.get(url)
     }
     return {

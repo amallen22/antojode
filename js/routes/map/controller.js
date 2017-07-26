@@ -14,7 +14,8 @@ angular.module('mainApp')
     var latitude = position.coords.latitude
     var longitude = position.coords.longitude
     var ll = latitude + ', ' + longitude
-    $scope.ll
+
+    $scope.ll = ll
 
     // console.log(position)
     dataService.getConfig(query, ll)

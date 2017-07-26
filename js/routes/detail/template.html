@@ -1,0 +1,11 @@
+<div class="container">
+	<h1>{{ section }}</h1>
+	<ol>
+		<li ng-repeat="item in items">
+			<h3>{{ item.venue.name }}</h3>
+			<h5>{{ item.venue.id }}</h5>
+			<h5>{{ item.venue.location.lat }}</h5>
+			<h5>{{ item.venue.location.lng }}</h5>
+		</li>
+	</ol>
+</div>

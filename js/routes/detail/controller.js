@@ -10,13 +10,9 @@ angular.module('mainApp')
   $scope.section = query
 
   // get user geolocalitation
-  navigator.geolocation.getCurrentPosition(function (position) {
-    var latitude = position.coords.latitude
-    var longitude = position.coords.longitude
-    var ll = latitude + ', ' + longitude
 
     // console.log(position)
-    dataService.getConfig(query, ll)
+  dataService.getConfig(query, ll)
     .then(function (config) {
       console.log(config.data.response.groups['0'].items)
       $scope.items = config.data.response.groups[0].items
@@ -25,5 +21,4 @@ angular.module('mainApp')
       // console.log(config.data.response.groups['0'].items[3].venue.location.lat)
       // console.log(config.data.response.groups['0'].items[3].venue.location.lng)
     })
-  })
 })
