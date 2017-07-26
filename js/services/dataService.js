@@ -8,6 +8,7 @@ angular.module('mainApp')
 
     function getConfig (query, ll) {
       var url = 'https://api.foursquare.com/v2/venues/explore?client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20130815&ll=' + ll + '&radius=3000&section=&limit=10&query=' + query
+
       return $http.get(url)
     }
     return {
