@@ -18,6 +18,7 @@ angular.module('mainApp')
     // console.log(position)
     dataService.getConfig(query, ll)
     .then(function (config) {
+      console.log(config)
       // console.log(config.data.response.groups['0'].items)
       $scope.items = config.data.response.groups[0].items
 
