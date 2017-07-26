@@ -7,7 +7,7 @@ angular.module('mainApp')
     var userPosition = '41.398362999999996, 2.1999963' // latitude longitude
 
     function getConfig (clientService) {
-      var url = 'https://api.foursquare.com/v2/venues/explore?client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20130815&ll=' + userPosition + '&radius=3000&section=food&limit=10&query=' + clientService
+      var url = 'https://api.foursquare.com/v2/venues/explore?client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20130815&ll=' + userPosition + '&radius=3000&section=food&limit=5&query=' + clientService
       return $http.get(url)
     }
     return {
@@ -22,30 +22,30 @@ angular.module('mainApp')
         id: 0,
         title: 'Desayuno',
         subCategory: [
-          { id: 0, type: 'Dulce' },
-          { id: 1, type: 'Salado' }
+      {id: 0, type: 'Dulce' },
+      {id: 1, type: 'Salado' }
         ]
       },
       {
         id: 1,
         title: 'Almuerzo',
         subCategory: [
-          { id: 0, type: 'Take Away'},
-          { id: 1, type: 'Mar'},
-          { id: 2, type: 'Montaña'},
-          { id: 3, type: 'Vegetariano'},
-          { id: 4, type: 'Exótico'}
+      {id: 0, type: 'Take Away'},
+      {id: 1, type: 'Mar'},
+      {id: 2, type: 'Montaña'},
+      {id: 3, type: 'Vegetariano'},
+      {id: 4, type: 'Exótico'}
         ]
       },
       {
         id: 2,
         title: 'Cena',
         subCategory: [
-          { id: 0, type: 'Take Away'},
-          { id: 1, type: 'Mar'},
-          { id: 2, type: 'Montaña'},
-          { id: 3, type: 'Vegetariano'},
-          { id: 4, type: 'Exótico'}
+      {id: 0, type: 'Take Away'},
+      {id: 1, type: 'Mar'},
+      {id: 2, type: 'Montaña'},
+      {id: 3, type: 'Vegetariano'},
+      {id: 4, type: 'Exótico'}
         ]
       },
       {
@@ -64,3 +64,23 @@ angular.module('mainApp')
 
     return localData
   })
+
+  // .factory(‘locationsModel’, function() {
+  //   const locationsModel = [{
+  //     name: ‘Wilshire Country Club’,
+  //     color: ‘darkblue’,
+  //     lat: 34.077796,
+  //     lng: -118.331151
+  //   },{
+  //     name: ‘301 N Rossmore Ave’,
+  //     color: ‘fuchsia’,
+  //     lat: 34.077146,
+  //     lng: -118.327805
+  //   },{
+  //     name: ‘5920 Beverly Blvd’,
+  //     color: ‘red’,
+  //     lat: 34.070281,
+  //     lng: -118.331831
+  //   }];
+  //   return locationsModel;
+  // })
