@@ -13,8 +13,7 @@
           <!-- SHOW INFO WHEN CLICK ON ICON -->
           <info-window id="info{{$index}}">
             <div>
-              <p>{{item.venue.name}}</p>
-              <strong><a ng-href="#!/detail/{{item.venue.id}}">To restauran!</a></strong>
+              <strong><a ng-click="showVenue(item)">{{item.venue.name}}</a></strong>
 
 
 

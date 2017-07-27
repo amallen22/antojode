@@ -1,16 +1,16 @@
 angular.module('mainApp')
-.controller('mapController', function ($scope, $routeParams, dataService, localData) {
+.controller('mapController', function ($location, $scope, $routeParams, dataService, localData) {
   var catId = $routeParams.catId
   var subId = $routeParams.subId
   $scope.catId = $routeParams.catId
   $scope.subId = $routeParams.subId
+  var urlDetails = 'categories/'+catId+'/map/'+subId+'/detail/'
 
   var querySubCategory = localData[catId].subCategory[subId].type
   // esta query tiene que llegar al dataService para recojer parametro
   var query = querySubCategory
 
   $scope.section = query
-
 
   // get user geolocalitation
   navigator.geolocation.getCurrentPosition(function (position) {
@@ -23,8 +23,11 @@ angular.module('mainApp')
     dataService.getConfig(query, ll)
     .then(function (config) {
       $scope.items = config.data.response.groups[0].items
-})
+    })
   })
 
+  $scope.showVenue = function(item) {
+    $location.path(urlDetails + item.venue.id);
+  };
 
 })
