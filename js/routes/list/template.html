@@ -1,17 +1,14 @@
-<div class="container">
-	<h1>{{ section }}</h1>
-	<div class="main">
-		<p><a href="#!/categories/{{catId}}/map/{{subId}}">To map</a></p>
-	</div>
-	<ul > 
-		<li  ng-repeat="item in items">
-		<div class="container">
-		<a ng-href="#!/detail/{{item.venue.id}}">
-			<h3>{{ item.venue.name }}</h3>
-			<h5>{{ item.venue.categories[0].pluralName }}</h5>
-			</a>
-			</div>
-		</li>
-	</ul>
+<div class="list">
+    <div class="container">
+        <h1>{{ section }}</h1>
+        <p><a href="#!/categories/{{catId}}/map/{{subId}}" class="link">To map</a></p>
+        <ul>
+            <li ng-repeat="item in items" >
+                <a ng-href="#!/detail/{{item.venue.id}}">
+                    <h3>{{ item.venue.name }}</h3>
+                    <h5>{{ item.venue.categories[0].pluralName }}</h5>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
-

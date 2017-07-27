@@ -12,13 +12,18 @@ a:link {
 a:hover {
   transform: scale(1.1);
   color: #000000; }
-a .link {
+a.link {
   color: #ffffbf;
   font-size: .9em;
   background-color: #000000;
   padding: 0.2em 0.6em; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #000000;
   text-align: center; }
 
@@ -48,12 +53,14 @@ header h1 a:link {
   text-indent: -9999px;
   width: 150px; }
 
-[class^="pe-is-f-"], [class*=" pe-is-f-"] {
+[class^="pe-is-f-"],
+[class*=" pe-is-f-"] {
   font-size: 5.5em;
   display: block;
   margin-bottom: 0.1em; }
 
-.home a:link, .category a:link {
+.home a:link,
+.category a:link {
   padding: 40px;
   text-align: center; }
 
@@ -100,5 +107,20 @@ header h1 a:link {
   margin-top: 10px;
   font-weight: bold;
   text-align: center; }
+
+.list h3, .list h5 {
+  margin-top: 0; }
+.list p {
+  text-align: right; }
+.list ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  align-items: center; }
+.list li {
+  border-bottom: solid 1px;
+  border-color: white;
+  padding: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
