@@ -1,10 +1,10 @@
 <div class="map">
   <div class="container">
-    <h1>{{ section }}</h1>
+    <div class="footerSection"><h1>{{ section }}</h1></div>
     <div class="ngMap">
       <ng-map default-style="false" center="{{ll}}" zoom="13">
         <!-- comment MARKER WITH ON-CLICK EVENT AND DINAMIC POSITION FROM POSITION itemS-->
-        <div class="linkToList link"><a href="#!/categories/{{catId}}/subcategory/{{subId}}">To list</a></div>
+        <div class="linkToList"><a class="link" href="#!/categories/{{catId}}/subcategory/{{subId}}">To list</a></div>
 
         <div ng-repeat="item in items">
           <marker position="current" animation="Animation.BOUNCE" centered="true"></marker>

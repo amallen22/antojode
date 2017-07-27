@@ -15,6 +15,6 @@ angular.module('mainApp')
 
       $scope.venueDetail = detId.data.response.venue
       $scope.imgUrl = imgUrl
-      console.log(imgUrl)
+      console.log(detId.data.response.venue)
     })
 })
