@@ -2,8 +2,8 @@ angular.module('mainApp')
 
 .controller('detailController', function ($scope, $routeParams, dataService) {
   var detId = $routeParams.detId
-  $scope.catId = $routeParams.catId
-  $scope.subId = $routeParams.subId
+  // $scope.catId = $routeParams.catId
+  // $scope.subId = $routeParams.subId
 
   $scope.section = 'Antojo de '
 
