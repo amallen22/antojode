@@ -12,9 +12,15 @@ a:link {
 a:hover {
   transform: scale(1.1);
   color: #000000; }
+a .link {
+  color: #ffffbf;
+  font-size: .9em;
+  background-color: #000000;
+  padding: 0.2em 0.6em; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #000000; }
+  color: #000000;
+  text-align: center; }
 
 h1 {
   font-size: 3em; }
@@ -68,11 +74,6 @@ header h1 a:link {
     text-align: center; }
     .detail .main p {
       text-align: right; }
-      .detail .main p a {
-        color: #ffffbf;
-        font-size: .9em;
-        background-color: #000000;
-        padding: 0.2em 0.6em; }
   .detail .wrap-flex {
     background: #000000; }
     .detail .wrap-flex .flex-item p span {
@@ -98,13 +99,6 @@ header h1 a:link {
   width: 200px;
   margin-top: 10px;
   font-weight: bold;
-  text-align: center; }
-
-.home h1 {
-  text-align: center; }
-.home h3 {
-  text-align: center; }
-.home div {
   text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */
