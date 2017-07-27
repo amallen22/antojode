@@ -18,5 +18,9 @@
 		</div>
 
 	</section>
-	<!-- <p>{{ .data.response.venue.attributes.groups }}</p> -->
+	<div class="wrap-flex">
+			<div ng-repeat="attributes in venueDetail" class="flex-item">
+				<p>{{ attributes.groups }}</p>
+			</div>
+	</div>
 </div>

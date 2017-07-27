@@ -27,10 +27,17 @@ a {
         transform: scale(1.1); 
         color: $black;
     }
+    .link {
+        color: $interactive;
+        font-size: .9em;
+        background-color: $black;
+        padding: 0.2em 0.6em;
+    }
 
 }
 h1,h2,h3,h4,h5,h6 {
     color: $black;
+    text-align: center;
 }    
 h1 {
     font-size: 3em;
@@ -110,12 +117,6 @@ header h1 {
         
         p {
             text-align: right;
-            a {
-                color: $interactive;
-                font-size: .9em;
-                background-color: $black;
-                padding: 0.2em 0.6em;
-            }
         }
     }
     .wrap-flex {
@@ -201,17 +202,7 @@ header h1 {
 //     }
 // }
 
-.home{
-    h1{
-        text-align: center;
-    }
-    h3{
-        text-align: center;
-    }
-    div {
-        text-align: center;
-    }
-} 
+
 
 // .flex-list {
 //     padding: 0;
