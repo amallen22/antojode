@@ -5,15 +5,14 @@ $black: #000000;
 // @mixin bgMain($select, $format : 'm'){
 //     $url: ''
 // }
-
 // import font
 @import url('https://fonts.googleapis.com/css?family=Alef');
 
 // generic
-body{
-  background-color: $brand;
-  font-family: 'Alef', sans-serif;
-  line-height: 110%;
+body {
+    background-color: $brand;
+    font-family: 'Alef', sans-serif;
+    line-height: 110%;
 }
 
 a {
@@ -24,7 +23,7 @@ a {
         transition: all .2s ease-in-out;
     }
     &:hover {
-        transform: scale(1.1); 
+        transform: scale(1.1);
         color: $black;
     }
     &.link {
@@ -33,75 +32,77 @@ a {
         background-color: $black;
         padding: 0.2em 0.6em;
     }
-
 }
+
 h1,h2,h3,h4,h5,h6 {
     position: relative;
     z-index: 1;
     color: $black;
     text-align: center;
-}    
+}
+
 h1 {
   font-size: 3em;
 }
+
 ul {
-	margin: 0 auto;
-	padding: 0;
-	// display: inline-flex;
-	// flex-direction: row;
-	// flex-wrap: wrap;
-	// justify-content: space-around;
-	// align-content: space-around;
-	
-  li {	
-    width: 50%;
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-		// padding: 40px;
-		a {
-			text-decoration: none;
-			color: black;
-		}
-	}
-} 
+    margin: 0 auto;
+    padding: 0; // display: inline-flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
+    // align-content: space-around;
+    li {
+        width: 50%;
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center; // padding: 40px;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
 
 // Navbar header
-
 header h1 {
-  a:link {
-    background: url('../img/logo_antojo-de.png') no-repeat center center;
-    background-size: 100%;
-    display: block;
-    height: 72px;
-    margin: 0 auto;
-    text-indent: -9999px;
-    width: 150px;
-  }   
+    a:link {
+        background: url('../img/logo_antojo-de.png') no-repeat center center;
+        background-size: 100%;
+        display: block;
+        height: 72px;
+        margin: 0 auto;
+        text-indent: -9999px;
+        width: 150px;
+    }
 }
-[class^="pe-is-f-"], [class*=" pe-is-f-"] {
-  font-size: 5.5em;
-  display: block;
-  margin-bottom: .1em
+
+[class^="pe-is-f-"],
+[class*=" pe-is-f-"] {
+    font-size: 5.5em;
+    display: block;
+    margin-bottom: .1em
+
 }
 
 
 // home
+.home,
+.category {
+    a:link {
+        padding: 40px;
+        text-align: center;
+    }
 
-.home, .category {
-  a:link {
-    padding: 40px;
-    text-align: center;
-  }
 }
 
 // main section 
-
 .detail {
     position: relative;
-    
+
     .bg-main {
         position: absolute;
         top: -102px;
@@ -116,7 +117,7 @@ header h1 {
     }
     .main {
         text-align: center;
-        
+
         p {
             text-align: right;
         }
@@ -152,7 +153,9 @@ header h1 {
   -webkit-flex-flow: row wrap;
   justify-content: space-between;
 
-  list-style:none;
+
+    list-style: none;
+
 }
 
 
@@ -161,50 +164,71 @@ header h1 {
   width: 200px;
   margin-top: 10px;
 
-  font-weight: bold;
-  text-align: center; 
+
+    font-weight: bold;
+    text-align: center;
+
 }
 
 // details
+// list 
+.list {
+    h3, h5 {
+        margin-top:0;
+    }
+    p {
+        text-align: right;
+    }
+    ul {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        align-items: center; // Para volver al prototipo inicial
+        // -webkit-flex-direction: column;
+        //    flex-direction: column;
+        //    -webkit-justify-content: flex-start;
+        //    justify-content: flex-start
+    }
+    li {
+        border-bottom: solid 1px;
+        border-color: white;
+        padding: 20px;
+    }
+}
+
+
+
+
 
 // @media (min-width:320px) {
-
 //     .flex-item {
 //         width: 50%;
 //         font-size: 1em;
 //     }
 // }
-
 // @media (min-width:480px) {
-
 //     .flex-item {
 //         width: 50%;
 //         font-size: 1em;
 //     }
 // }
-
 // @media (min-width:768px) {
-
 //     .flex-item {
 //         width: 45%;
 //     }
 // }
-
 // @media (min-width:990px) {
-
 //     .flex-item {
 //         width: 45%;
 //     }
 // }
-
 // @media (min-width:1400px) {
-
 //     .flex-item {
 //         width: 48%;
 //         margin-top: 15px;
 //     }
 // }
-
 
 // .flex-list {
 //     padding: 0;
@@ -214,10 +238,10 @@ header h1 {
 //     flex-wrap: nowrap;
 //     list-style:none
 // }
-
 // .flex-save{
 //     border: 2px solid red;
 //     margin-top: 10px
+
 // }
 
 .ngMap{
@@ -251,4 +275,7 @@ ng-map{
     padding: 10px;
   }
 }
+
+
+
 
