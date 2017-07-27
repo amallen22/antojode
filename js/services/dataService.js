@@ -27,53 +27,30 @@ angular.module('mainApp')
     var localData = [
       {
         id: 0,
-        title: 'Desayuno',
+        title: 'Comer',
         style: 'pe-is-f-bread-1',
         subCategory: [
-      {id: 0, type: 'Dulce', style: 'pe-is-f-donut-1' },
-      {id: 1, type: 'Salado', style: 'pe-is-f-sandwich' }
+      {id: 0, type: 'Carne', style: 'pe-is-f-donut-1' },
+      {id: 1, type: 'Pescado', style: 'pe-is-f-sandwich' },
+      {id: 2, type: 'BBQ', style: 'pe-is-f-donut-1' },
+      {id: 3, type: 'Tapas', style: 'pe-is-f-donut-1' },
+      {id: 4, type: 'Take Away', style: 'pe-is-f-donut-1' },
+      {id: 5, type: 'Brunch', style: 'pe-is-f-donut-1' }
         ]
       },
       {
         id: 1,
-        title: 'Comida',
+        title: 'Beber',
         style: 'pe-is-f-flatware-1',
         subCategory: [
-      {id: 0, type: 'Take Away', style: 'pe-is-f-milk-2' },
-      {id: 1, type: 'Pescado', style: 'pe-is-f-fish-1' },
-      {id: 2, type: 'Carne', style: 'pe-is-f-steak-2' },
-      {id: 3, type: 'Vegetariano', style: 'pe-is-f-pepper' },
-      {id: 4, type: 'Etnico', style: 'pe-is-f-sushi-2' }
+      {id: 0, type: 'Cafe y té', style: 'pe-is-f-milk-2' },
+      {id: 1, type: 'Smoothie', style: 'pe-is-f-fish-1' },
+      {id: 2, type: 'Batidos', style: 'pe-is-f-steak-2' },
+      {id: 3, type: 'Vermut', style: 'pe-is-f-pepper' },
+      {id: 4, type: 'Cocteles', style: 'pe-is-f-sushi-2' },
+      {id: 5, type: 'Copas', style: 'pe-is-f-donut-1' }
         ]
-      },
-      {
-        id: 2,
-        title: 'Cena',
-        style: 'pe-is-f-cloche-hand',
-        subCategory: [
-      {id: 0, type: 'Take Away', style: 'pe-is-f-milk-2'},
-      {id: 1, type: 'Pescado', style: 'pe-is-f-fish-1'},
-      {id: 2, type: 'Carne', style: 'pe-is-f-steak-2'},
-      {id: 3, type: 'Vegetariano', style: 'pe-is-f-pepper'},
-      {id: 4, type: 'Etnico', style: 'pe-is-f-sushi-2'}
-        ]
-      },
-      {
-        id: 3,
-        title: 'Café y té',
-        style: 'pe-is-f-cup-coffee-hot-1'
-      },
-      {
-        id: 4,
-        title: 'Tapas',
-        style: 'pe-is-f-skewer'
-      },
-      {
-        id: 5,
-        title: 'Copas',
-        style: 'pe-is-f-whisky-glass-1'
-      }
-
+      }      
     ]
 
     return localData
