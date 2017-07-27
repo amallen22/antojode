@@ -1,4 +1,86 @@
-.category-flex {
+@import url("https://fonts.googleapis.com/css?family=Alef");
+body {
+  background-color: #ffb399;
+  font-family: 'Alef', sans-serif;
+  line-height: 110%; }
+
+a:link {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: all .2s ease-in-out; }
+a:hover {
+  transform: scale(1.1);
+  color: #000000; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000000; }
+
+h1 {
+  font-size: 3em; }
+
+ul {
+  margin: 0 auto;
+  padding: 0; }
+  ul li {
+    width: 50%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+    ul li a {
+      text-decoration: none;
+      color: black; }
+
+header h1 a:link {
+  background: url("../img/logo_antojo-de.png") no-repeat center center;
+  background-size: 100%;
+  display: block;
+  height: 72px;
+  margin: 0 auto;
+  text-indent: -9999px;
+  width: 150px; }
+
+[class^="pe-is-f-"], [class*=" pe-is-f-"] {
+  font-size: 5.5em;
+  display: block;
+  margin-bottom: 0.1em; }
+
+.home a:link, .category a:link {
+  padding: 40px;
+  text-align: center; }
+
+.detail {
+  position: relative; }
+  .detail .bg-main {
+    position: absolute;
+    top: -102px;
+    margin-bottom: 0;
+    z-index: -1;
+    max-width: 100%;
+    opacity: .25;
+    width: 100%;
+    height: 300px;
+    background: no-repeat center center;
+    background-size: cover; }
+  .detail .main {
+    text-align: center; }
+    .detail .main p {
+      text-align: right; }
+      .detail .main p a {
+        color: #ffffbf;
+        font-size: .9em;
+        background-color: #000000;
+        padding: 0.2em 0.6em; }
+  .detail .wrap-flex {
+    background: #000000; }
+    .detail .wrap-flex .flex-item p span {
+      font-size: 3em; }
+    .detail .wrap-flex .flex-item span {
+      font-size: 2em; }
+
+.wrap-flex {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -8,77 +90,33 @@
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  list-style: none; }
 
 .flex-item {
-  background: white;
-  border: 2px solid red;
-  padding: 5px;
+  color: #fff;
   width: 200px;
-  height: 150px;
   margin-top: 10px;
-  line-height: 150px;
-  color: white;
   font-weight: bold;
-  font-size: 2em;
   text-align: center; }
 
-@media (max-width: 320px) {
-  .flex-item {
-    width: 50%;
-    font-size: 1em; } }
-@media (max-width: 480px) {
-  .flex-item {
-    width: 50%;
-    font-size: 1em; } }
-@media (max-width: 768px) {
-  .flex-item {
-    width: 45%; } }
-@media (max-width: 990px) {
-  .flex-item {
-    width: 45%; } }
-@media (max-width: 1200px) {
-  .flex-item {
-    width: 48%;
-    margin-top: 15px; } }
 .home h1 {
   text-align: center; }
 .home h3 {
   text-align: center; }
 .home div {
   text-align: center; }
-  .home div ul {
-    margin: 0 auto;
-    padding: 0;
-    border: 2px solid green;
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around; }
-    .home div ul li {
-      width: 50%;
-      border: 1px solid red;
-      display: inline-flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 40px; }
-      .home div ul li a {
-        text-decoration: none;
-        color: black; }
 
-.flex-list {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  list-style: none; }
+.ngMap {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
 
-.flex-save {
-  border: 2px solid red;
-  margin-top: 10px; }
+ng-map {
+  display: block;
+  height: 100%; }
 
 /*# sourceMappingURL=main.css.map */

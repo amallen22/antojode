@@ -19,6 +19,8 @@ a.link {
   padding: 0.2em 0.6em; }
 
 h1, h2, h3, h4, h5, h6 {
+  position: relative;
+  z-index: 1;
   color: #000000;
   text-align: center; }
 
@@ -49,12 +51,14 @@ header h1 a:link {
   text-indent: -9999px;
   width: 150px; }
 
-[class^="pe-is-f-"], [class*=" pe-is-f-"] {
+[class^="pe-is-f-"],
+[class*=" pe-is-f-"] {
   font-size: 5.5em;
   display: block;
   margin-bottom: 0.1em; }
 
-.home a:link, .category a:link {
+.home a:link,
+.category a:link {
   padding: 40px;
   text-align: center; }
 
@@ -75,12 +79,13 @@ header h1 a:link {
     text-align: center; }
     .detail .main p {
       text-align: right; }
-  .detail .wrap-flex {
-    background: #000000; }
-    .detail .wrap-flex .flex-item p span {
-      font-size: 3em; }
-    .detail .wrap-flex .flex-item span {
-      font-size: 2em; }
+
+.wrap-flex {
+  background: #000000; }
+  .wrap-flex .flex-item p span {
+    font-size: 3em; }
+  .wrap-flex .flex-item span {
+    font-size: 2em; }
 
 .wrap-flex {
   padding: 0;
@@ -102,4 +107,43 @@ header h1 a:link {
   font-weight: bold;
   text-align: center; }
 
-/*# sourceMappingURL=styles.css.map */
+.list h3, .list h5 {
+  margin-top: 0; }
+.list p {
+  text-align: right; }
+.list ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  align-items: center; }
+.list li {
+  border-bottom: solid 1px;
+  border-color: white;
+  padding: 20px; }
+
+.ngMap {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
+
+ng-map {
+  display: block;
+  height: 100%; }
+
+.map .linkToList {
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  top: 15px; }
+.map .footerSection {
+  position: absolute;
+  bottom: 15px;
+  z-index: 1;
+  text-align: center;
+  left: 35%;
+  background-color: #ffb399;
+  padding: 10px; }
