@@ -10,6 +10,6 @@ angular.module('mainApp')
   dataService.getVenueDetails(detId)
     .then(function (detId) {
       $scope.venueDetail = detId.data.response.venue
-      console.log(detId)
+      console.log(detId.data.response.venue)
     })
 })
