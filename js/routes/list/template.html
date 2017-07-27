@@ -1,12 +1,17 @@
 <div class="container">
 	<h1>{{ section }}</h1>
-	<ul class="wrap-flex">
-		<li class="flex-item" ng-repeat="item in items">
-			<h3><a href="#!/categories/{{cat.id}}/subCategory/{{sub.id}}/details" ></a>{{ item.venue.name }}</h3>
+	<div class="main">
+		<p><a href="#!/categories/{{catId}}/map/{{subId}}">To map</a></p>
+	</div>
+	<ul > 
+		<li  ng-repeat="item in items">
+		<div class="container">
+		<a ng-href="#!/detail/{{item.venue.id}}">
+			<h3>{{ item.venue.name }}</h3>
 			<h5>{{ item.venue.categories[0].pluralName }}</h5>
-			<!-- <h5>{{ item.venue.id }}</h5>
-			<h5>{{ item.venue.location.lat }}</h5>
-			<h5>{{ item.venue.location.lng }}</h5> -->
+			</a>
+			</div>
 		</li>
 	</ul>
 </div>
+
