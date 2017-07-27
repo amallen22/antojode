@@ -53,13 +53,17 @@ header h1 a:link {
 
 .detail {
   position: relative; }
-  .detail img {
+  .detail .bg-main {
     position: absolute;
     top: -102px;
     margin-bottom: 0;
     z-index: -1;
     max-width: 100%;
-    opacity: .25; }
+    opacity: .25;
+    width: 100%;
+    height: 300px;
+    background: no-repeat center center;
+    background-size: cover; }
   .detail .main {
     text-align: center; }
     .detail .main p {
