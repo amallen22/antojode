@@ -1,7 +1,7 @@
 <div class="list">
     <div class="container">
         <h1>{{ section }}</h1>
-        <p><a href="#!/categories/{{catId}}/map/{{subId}}" class="link">To map</a></p>
+        <p><a ng-href="#!/categories/{{catId}}/map/{{subId}}" class="link">To map</a></p>
         <ul>
             <li ng-repeat="item in items" >
                 <a ng-href="#!/detail/{{item.venue.id}}">

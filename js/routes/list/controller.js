@@ -3,11 +3,13 @@ angular.module('mainApp')
   var catId = $routeParams.catId
   var subId = $routeParams.subId
   var venueId = $routeParams.venueId
+  $scope.catId = catId
+  $scope.subId = subId
 
-  var queryCategory = localData[catId].title
+
   var querySubCategory = localData[catId].subCategory[subId].type
   // esta query tiene que llegar al dataService para recojer parametro
-  var query = queryCategory + ' ' + querySubCategory
+  var query = querySubCategory
 
   $scope.section = query
 
