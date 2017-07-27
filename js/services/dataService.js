@@ -30,7 +30,7 @@ angular.module('mainApp')
         title: 'Desayuno',
         style: 'pe-is-f-bread-1',
         subCategory: [
-      {id: 0, type: 'Dulce', style: 'pe-is-f-donut-1' },
+      {id: 0, type: 'Dulce', style: 'pe-is-f-cocktail-glass-3' },
       {id: 1, type: 'Salado', style: 'pe-is-f-sandwich' }
         ]
       },
