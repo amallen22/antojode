@@ -1,11 +1,22 @@
-<div class="container">
-	<h1>{{ section }}</h1>
-	<ol>
-		<li ng-repeat="item in items">
-			<h3>{{ item.venue.name }}</h3>
-			<h5>{{ item.venue.id }}</h5>
-			<h5>{{ item.venue.location.lat }}</h5>
-			<h5>{{ item.venue.location.lng }}</h5>
-		</li>
-	</ol>
+<div class="detail">
+	<img ng-src="{{venueDetail.bestPhoto.prefix}}original{{venueDetail.bestPhoto.suffix}}">
+	<section class="container">
+		<div class="main">
+			<h1>{{venueDetail.name}}</h1>
+			<h3>{{venueDetail.categories[0].name}}</h3>
+			<p><a href="#!/categories/{{catId}}/map/{{subId}}">To map</a></p>
+		</div>
+		<div class="wrap-flex">
+			<div class="flex-item">
+				<p>{{venueDetail.likes.count}} valoraciones</p>
+				<p><span>{{venueDetail.rating}}</span>/10</p>
+			</div>
+			<div class="flex-item">
+				<!-- <p>{{venueDetail.popular.status}}</p> -->
+				<p>Hasta las 24:00h</p>
+				<span>¡Abierto!</span>
+			</div>
+		</div>
+
+	</section>
 </div>

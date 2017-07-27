@@ -4,13 +4,16 @@
 		<!-- comment MARKER WITH ON-CLICK EVENT AND DINAMIC POSITION FROM POSITION itemS-->
 
 		<div ng-repeat="item in items">
-		<marker id="item{{$index}}" animation="DROP" position="{{ item.venue.location.lat}}, {{item.venue.location.lng}}"	on-click="map.showInfoWindow('info{{$index}}')"></marker>
+			<marker id="item{{$index}}" animation="DROP" position="{{ item.venue.location.lat}}, {{item.venue.location.lng}}"	on-click="map.showInfoWindow('info{{$index}}')"></marker>
 
 			<!-- SHOW INFO WHEN CLICK ON ICON -->
 			<info-window id="info{{$index}}">
 				<div>
-					<p>{{item.venue.name}}</p>
-					<a href="/categories/{{catId}}/subcategory/{{subId}}/detail/{{item.venue.id}}">Click Here</a> 
+					<h3>{{item.venue.name}}</h3>
+					<p>{{item.venue.id}}</p>
+					<a href="#!/categories/{{catId}}/map/{{subId}}/detail/{{item.venue.id}}">
+						<small>View detail!</small>
+					</a> 
 				</div>
 			</info-window>
 		</div>

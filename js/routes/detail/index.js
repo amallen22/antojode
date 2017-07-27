@@ -2,8 +2,8 @@ angular.module('mainApp')
 
 .config(function ($routeProvider) {
   $routeProvider
-	.when('/categories/:catId/subcategory/:subId', {
-  templateUrl: 'js/routes/list/template.html',
-  controller: 'listController'
+	.when('/categories/:catId/map/:subId/detail/:detId', {
+  templateUrl: 'js/routes/detail/template.html',
+  controller: 'detailController'
 })
 })

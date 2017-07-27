@@ -8,11 +8,17 @@ angular.module('mainApp')
 
     function getConfig (query, ll) {
       var url = 'https://api.foursquare.com/v2/venues/explore?client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20130815&ll=' + ll + '&radius=3000&section=&limit=10&query=' + query
-
       return $http.get(url)
     }
+
+    function getVenueDetails (detId) {
+      var url = 'https://api.foursquare.com/v2/venues/' + detId + '?v=20170501&client_id=' + clientId + '&client_secret=' + clientSecret
+      return $http.get(url)
+    }
+
     return {
-      getConfig: getConfig
+      getConfig: getConfig,
+      getVenueDetails: getVenueDetails
     }
   })
 
@@ -24,67 +30,51 @@ angular.module('mainApp')
         title: 'Desayuno',
         style: 'pe-is-f-bread-1',
         subCategory: [
-      {id: 0, type: 'Dulce' },
-      {id: 1, type: 'Salado' }
+      {id: 0, type: 'Dulce', style: 'pe-is-f-donut-1' },
+      {id: 1, type: 'Salado', style: 'pe-is-f-sandwich' }
         ]
       },
       {
         id: 1,
         title: 'Comida',
+        style: 'pe-is-f-flatware-1',
         subCategory: [
-      {id: 0, type: 'Take Away'},
-      {id: 1, type: 'Pescado'},
-      {id: 2, type: 'Carne'},
-      {id: 3, type: 'Vegetariano'},
-      {id: 4, type: 'Etnico'}
+      {id: 0, type: 'Take Away', style: 'pe-is-f-milk-2' },
+      {id: 1, type: 'Pescado', style: 'pe-is-f-fish-1' },
+      {id: 2, type: 'Carne', style: 'pe-is-f-steak-2' },
+      {id: 3, type: 'Vegetariano', style: 'pe-is-f-pepper' },
+      {id: 4, type: 'Etnico', style: 'pe-is-f-sushi-2' }
         ]
       },
       {
         id: 2,
         title: 'Cena',
+        style: 'pe-is-f-cloche-hand',
         subCategory: [
-      {id: 0, type: 'Take Away'},
-      {id: 1, type: 'Pescado'},
-      {id: 2, type: 'Carne'},
-      {id: 3, type: 'Vegetariano'},
-      {id: 4, type: 'Etnico'}
+      {id: 0, type: 'Take Away', style: 'pe-is-f-milk-2'},
+      {id: 1, type: 'Pescado', style: 'pe-is-f-fish-1'},
+      {id: 2, type: 'Carne', style: 'pe-is-f-steak-2'},
+      {id: 3, type: 'Vegetariano', style: 'pe-is-f-pepper'},
+      {id: 4, type: 'Etnico', style: 'pe-is-f-sushi-2'}
         ]
       },
       {
         id: 3,
-        title: 'Café y té'
+        title: 'Café y té',
+        style: 'pe-is-f-cup-coffee-hot-1'
       },
       {
         id: 4,
-        title: 'Tapas'
+        title: 'Tapas',
+        style: 'pe-is-f-skewer'
       },
       {
         id: 5,
-        title: 'Copas'
+        title: 'Copas',
+        style: 'pe-is-f-whisky-glass-1'
       }
 
     ]
 
     return localData
   })
-
-  // STATIC LOCATION DATA
-  // .factory(‘locationsModel’, function() {
-  //   const locationsModel = [{
-  //     name: ‘Wilshire Country Club’,
-  //     color: ‘darkblue’,
-  //     lat: 34.077796,
-  //     lng: -118.331151
-  //   },{
-  //     name: ‘301 N Rossmore Ave’,
-  //     color: ‘fuchsia’,
-  //     lat: 34.077146,
-  //     lng: -118.327805
-  //   },{
-  //     name: ‘5920 Beverly Blvd’,
-  //     color: ‘red’,
-  //     lat: 34.070281,
-  //     lng: -118.331831
-  //   }];
-  //   return locationsModel;
-  // })

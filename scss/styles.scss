@@ -1,8 +1,56 @@
 $brand: #ffb399;
+$interactive: #ffffbf;
+$black: #000000;
 
+// @mixin bgMain($select, $format : 'm'){
+//     $url: ''
+// }
+
+// import font
+@import url('https://fonts.googleapis.com/css?family=Alef');
+
+// generic
 body{
     background-color: $brand;
+    font-family: 'Alef', sans-serif;
+    line-height: 110%;
 }
+
+a:link {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+h1,h2,h3,h4,h5,h6 {
+    color: $black;
+}    
+h1 {
+    font-size: 3em;
+}
+ul {
+	margin: 0 auto;
+	padding: 0;
+	// display: inline-flex;
+	// flex-direction: row;
+	// flex-wrap: wrap;
+	// justify-content: space-around;
+	// align-content: space-around;
+	
+    li {	
+		width: 50%;
+		display: inline-flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		// padding: 40px;
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	}
+} 
+
 // Navbar header
 
 header h1 {
@@ -17,14 +65,64 @@ header h1 {
     }   
 }
 [class^="pe-is-f-"], [class*=" pe-is-f-"] {
-    font-size: 3em;
-
+    font-size: 5.5em;
+    display: block;
+    margin-bottom: .1em
 }
 
 
+// home
+
+.home, .category {
+    a:link {
+        padding: 40px;
+        text-align: center;
+    }
+}
+
+// main section 
+
+.detail {
+    position: relative;
+    
+    img {
+        position: absolute;
+        top: -102px;
+        margin-bottom: 0;
+        z-index: -1;
+        max-width: 100%;
+        opacity: .25;
+    }
+    .main {
+        text-align: center;
+        
+        p {
+            text-align: right;
+            a {
+                color: $interactive;
+                font-size: .9em;
+                background-color: $black;
+                padding: 0.2em 0.6em;
+            }
+        }
+    }
+    .wrap-flex {
+        background: $black;
+
+        .flex-item {
+            p span {
+                font-size: 3em;
+            }
+            span {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
 
 // model box categories pages
-.category-flex {
+.wrap-flex {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -37,111 +135,83 @@ header h1 {
 
     -webkit-flex-flow: row wrap;
     justify-content: space-between;
+
+    list-style:none;
 }
 
 
 .flex-item {
-    background: white;
-    border: 2px solid red;
-    padding: 5px;
+    color: #fff;
     width: 200px;
-    height: 150px;
     margin-top: 10px;
 
-    line-height: 150px;
-    color: white;
     font-weight: bold;
-    font-size: 2em;
-    text-align: center; // border: 2px solid red;
-    // align-items: flex-start;
-    // justify-content: space-around;
-    // width: 145px;
+    text-align: center; 
 }
 
-@media (max-width:320px) {
+// details
 
-    .flex-item {
-        width: 50%;
-        font-size: 1em;
-    }
-}
+// @media (min-width:320px) {
 
-@media (max-width:480px) {
+//     .flex-item {
+//         width: 50%;
+//         font-size: 1em;
+//     }
+// }
 
-    .flex-item {
-        width: 50%;
-        font-size: 1em;
-    }
-}
+// @media (min-width:480px) {
 
-@media (max-width:768px) {
+//     .flex-item {
+//         width: 50%;
+//         font-size: 1em;
+//     }
+// }
 
-    .flex-item {
-        width: 45%;
-    }
-}
+// @media (min-width:768px) {
 
-@media (max-width:990px) {
+//     .flex-item {
+//         width: 45%;
+//     }
+// }
 
-    .flex-item {
-        width: 45%;
-    }
-}
+// @media (min-width:990px) {
 
-@media (max-width:1400px) {
+//     .flex-item {
+//         width: 45%;
+//     }
+// }
 
-    .flex-item {
-        width: 48%;
-        margin-top: 15px;
-    }
-}
+// @media (min-width:1400px) {
+
+//     .flex-item {
+//         width: 48%;
+//         margin-top: 15px;
+//     }
+// }
 
 .home{
-	h1{
-		text-align: center;
-	}
-	h3{
-		text-align: center;
-	}
-	div {
-		text-align: center;
-		ul {
-			margin: 0 auto;
-			padding: 0;
-			border: 2px solid green;
-			display: inline-flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-around;
-			align-content: space-around;
-			li {	
-				width: 50%;
-				border: 1px solid red;
-				display: inline-flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				align-items: center;
-				justify-content: center;
-				padding: 40px;
-				a{
-					text-decoration: none;
-					color: black;
-				}
-			}
-		} }
+    h1{
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+    div {
+        text-align: center;
+    }
 } 
 
-.flex-list {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    list-style:none
-}
+// .flex-list {
+//     padding: 0;
+//     margin: 0;
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: nowrap;
+//     list-style:none
+// }
 
-.flex-save{
-    border: 2px solid red;
-    margin-top: 10px
-}
+// .flex-save{
+//     border: 2px solid red;
+//     margin-top: 10px
+// }
 
