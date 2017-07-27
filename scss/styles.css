@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Alef");
+@import url("https://fonts.googleapis.com/css?family=Alef:400,700");
 body {
   background-color: #ffb399;
   font-family: 'Alef', sans-serif;
@@ -12,7 +12,7 @@ a:link {
 a:hover {
   transform: scale(1.1);
   color: #000000; }
-a .link {
+a.link {
   color: #ffffbf;
   font-size: .9em;
   background-color: #000000;
@@ -23,7 +23,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center; }
 
 h1 {
-  font-size: 3em; }
+  font-size: 4em;
+  letter-spacing: -2px; }
 
 ul {
   margin: 0 auto;

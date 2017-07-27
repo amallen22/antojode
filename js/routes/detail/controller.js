@@ -15,6 +15,13 @@ angular.module('mainApp')
 
       $scope.venueDetail = detId.data.response.venue
       $scope.imgUrl = imgUrl
-      console.log(detId.data.response.venue)
+	  // console.log(detId.data.response.venue)
+
+	  // edit below
+
+      // console.log(detId.data.response.venue.attributes.groups[1].items[0].displayName)
+
+      $scope.attGroups = detId.data.response.venue.attributes.groups.slice(1, 5)
+      console.log(detId.data.response.venue.attributes.groups)
     })
 })

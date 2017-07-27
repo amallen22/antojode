@@ -7,7 +7,7 @@ $black: #000000;
 // }
 
 // import font
-@import url('https://fonts.googleapis.com/css?family=Alef');
+@import url('https://fonts.googleapis.com/css?family=Alef:400,700');
 
 // generic
 body{
@@ -27,7 +27,7 @@ a {
         transform: scale(1.1); 
         color: $black;
     }
-    .link {
+    &.link {
         color: $interactive;
         font-size: .9em;
         background-color: $black;
@@ -40,7 +40,8 @@ h1,h2,h3,h4,h5,h6 {
     text-align: center;
 }    
 h1 {
-    font-size: 3em;
+    font-size: 4em;
+    letter-spacing: -2px;
 }
 ul {
 	margin: 0 auto;

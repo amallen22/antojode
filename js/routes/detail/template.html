@@ -4,7 +4,7 @@
 		<div class="main">
 			<h1>{{venueDetail.name}}</h1>
 			<h3>{{venueDetail.categories[0].name}}</h3>
-			<p><a href="#!/categories/{{catId}}/map/{{subId}}">To map</a></p>
+			<p><a class="link" href="#!/categories/{{catId}}/map/{{subId}}">To map</a></p>
 		</div>
 		<div class="wrap-flex">
 			<div class="flex-item">
@@ -13,14 +13,79 @@
 			</div>
 			<div class="flex-item">
 				<p>{{venueDetail.popular.status}}</p>
-				<!-- <p>{{venueDetail.popular.hours}}</p> -->
+				<p>{{venueDetail.popular.hours}}</p>
+			</div>
+		</div>
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<h4 class="panel-title">
+						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							SERVICIOS
+						</a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					<div class="panel-body" ng-repeat="box in attGroups">
+						<p >{{ box.items[0].displayName }}: {{ box.items[0].displayValue }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingTwo">
+					<h4 class="panel-title">
+						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							TIPS
+						</a>
+					</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					<div class="panel-body" ng-repeat="box in attGroups">
+						<p >{{ box.items[0].displayName }}: {{ box.items[0].displayValue }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingThree">
+					<h4 class="panel-title">
+						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							FOTOS
+						</a>
+					</h4>
+				</div>
+				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					<div class="panel-body" ng-repeat="box in attGroups">
+						<p>{{ box.items[0].displayName }}: {{ box.items[0].displayValue }}</p>
+					</div>
+				</div>
 			</div>
 		</div>
 
 	</section>
-	<div class="wrap-flex">
-			<div ng-repeat="attributes in venueDetail" class="flex-item">
-				<p>{{ attributes.groups }}</p>
-			</div>
-	</div>
+	<!-- <div>
+		<div ng-controller="detailController">
+			<accordion>
+				<accordion-group >
+					<accordion-heading>
+						<span ng-click="opened(group, $index)"><h4>Servicios</h4></span>
+					</accordion-heading>
+					<div ng-repeat="box in attGroups">
+						<p >{{ box.items[0].displayName }}: {{ box.items[0].displayValue }}</p>
+					</div>
+				</accordion-group>    
+			</accordion>    
+		</div>
+	</div> -->
 </div>
+
+
+<!-- <div ng-controller="AccordionDemoCtrl">
+  <accordion>
+    <accordion-group ng-repeat="group in groups" >
+      <accordion-heading>
+        <span ng-click="opened(group, $index)">{{group.title}}</span>
+      </accordion-heading>
+      {{group.content}}
+    </accordion-group>    
+  </accordion>    
+</div> -->
