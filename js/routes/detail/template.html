@@ -1,5 +1,5 @@
 <div class="detail">
-	<img ng-src="{{venueDetail.bestPhoto.prefix}}original{{venueDetail.bestPhoto.suffix}}">
+	<!-- <div class="bg-main" ng-style="{'ba ckground-image':'url({{venueDetail.bestPhoto.prefix}}original{{venueDetail.bestPhoto.suffix}})'}"></div>-->	<div class="bg-main" ng-style="{'background-image': 'url('+ imgUrl + ')'}"></div>
 	<section class="container">
 		<div class="main">
 			<h1>{{venueDetail.name}}</h1>
@@ -12,12 +12,11 @@
 				<p><span>{{venueDetail.rating}}</span>/10</p>
 			</div>
 			<div class="flex-item">
-				<p>aaa</p>
-				<p>{{venueDetail.hours.status}}</p>
-				<span>¡Abierto!</span>
+				<p>{{venueDetail.popular.status}}</p>
+				<!-- <p>{{venueDetail.popular.hours}}</p> -->
 			</div>
 		</div>
 
 	</section>
-	<p>{{}}</p>
+	<!-- <p>{{ .data.response.venue.attributes.groups }}</p> -->
 </div>

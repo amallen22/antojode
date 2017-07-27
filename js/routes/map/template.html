@@ -1,23 +1,28 @@
-<div class="container">
+<div class="map">
+  <div class="container">
     <h1>{{ section }}</h1>
-    <ng-map default-style="false" center="{{ll}}" zoom="13">
+    <div class="ngMap">
+      <ng-map default-style="false" center="{{ll}}" zoom="13">
         <!-- comment MARKER WITH ON-CLICK EVENT AND DINAMIC POSITION FROM POSITION itemS-->
- 
+        <div class="linkToList link"><a href="#!/categories/{{catId}}/subcategory/{{subId}}">To list</a></div>
+
         <div ng-repeat="item in items">
-        <marker position="current" animation="Animation.BOUNCE" centered="true"></marker>
-        <marker id="item{{$index}}" animation="DROP" position="{{ item.venue.location.lat}}, {{item.venue.location.lng}}"  on-click="map.showInfoWindow('info{{$index}}')"></marker>
- 
-            <!-- SHOW INFO WHEN CLICK ON ICON -->
-            <info-window id="info{{$index}}">
-                <div>
-                    <p>{{item.venue.name}}</p>
-                    <strong><a ng-href="#!/detail/{{item.venue.id}}">To restauran!</a></strong>
- 
- 
- 
-                </div>
-            </info-window>
+          <marker position="current" animation="Animation.BOUNCE" centered="true"></marker>
+          <marker id="item{{$index}}" animation="DROP" position="{{ item.venue.location.lat}}, {{item.venue.location.lng}}"  on-click="map.showInfoWindow('info{{$index}}')"></marker>
+
+          <!-- SHOW INFO WHEN CLICK ON ICON -->
+          <info-window id="info{{$index}}">
+            <div>
+              <p>{{item.venue.name}}</p>
+              <strong><a ng-href="#!/detail/{{item.venue.id}}">To restauran!</a></strong>
+
+
+
+            </div>
+          </info-window>
         </div>
-    </ng-map>
- 
-</div>
+      </ng-map>
+    </div>
+
+  </div>
+</div>    

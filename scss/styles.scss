@@ -11,29 +11,29 @@ $black: #000000;
 
 // generic
 body{
-    background-color: $brand;
-    font-family: 'Alef', sans-serif;
-    line-height: 110%;
+  background-color: $brand;
+  font-family: 'Alef', sans-serif;
+  line-height: 110%;
 }
 
 a {
-    &:link {
-        color: #000;
-        text-decoration: none;
-        font-size: 1.5em;
-        transition: all .2s ease-in-out;
-    }
-    &:hover {
-        transform: scale(1.1); 
-        color: $black;
-    }
+  &:link {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: all .2s ease-in-out;
+  }
+  &:hover {
+    transform: scale(1.1); 
+    color: $black;
+  }
 
 }
 h1,h2,h3,h4,h5,h6 {
-    color: $black;
+  color: $black;
 }    
 h1 {
-    font-size: 3em;
+  font-size: 3em;
 }
 ul {
 	margin: 0 auto;
@@ -44,13 +44,13 @@ ul {
 	// justify-content: space-around;
 	// align-content: space-around;
 	
-    li {	
-		width: 50%;
-		display: inline-flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
+  li {	
+    width: 50%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 		// padding: 40px;
 		a {
 			text-decoration: none;
@@ -62,99 +62,103 @@ ul {
 // Navbar header
 
 header h1 {
-    a:link {
-        background: url('../img/logo_antojo-de.png') no-repeat center center;
-        background-size: 100%;
-        display: block;
-        height: 72px;
-        margin: 0 auto;
-        text-indent: -9999px;
-        width: 150px;
-    }   
+  a:link {
+    background: url('../img/logo_antojo-de.png') no-repeat center center;
+    background-size: 100%;
+    display: block;
+    height: 72px;
+    margin: 0 auto;
+    text-indent: -9999px;
+    width: 150px;
+  }   
 }
 [class^="pe-is-f-"], [class*=" pe-is-f-"] {
-    font-size: 5.5em;
-    display: block;
-    margin-bottom: .1em
+  font-size: 5.5em;
+  display: block;
+  margin-bottom: .1em
 }
 
 
 // home
 
 .home, .category {
-    a:link {
-        padding: 40px;
-        text-align: center;
-    }
+  a:link {
+    padding: 40px;
+    text-align: center;
+  }
 }
 
 // main section 
 
 .detail {
-    position: relative;
-    
-    img {
-        position: absolute;
-        top: -102px;
-        margin-bottom: 0;
-        z-index: -1;
-        max-width: 100%;
-        opacity: .25;
-    }
-    .main {
-        text-align: center;
-        
-        p {
-            text-align: right;
-            a {
-                color: $interactive;
-                font-size: .9em;
-                background-color: $black;
-                padding: 0.2em 0.6em;
-            }
-        }
-    }
-    .wrap-flex {
-        background: $black;
+  position: relative;
 
-        .flex-item {
-            p span {
-                font-size: 3em;
-            }
-            span {
-                font-size: 2em;
-            }
-        }
+  .bg-main {
+    position: absolute;
+    top: -102px;
+    margin-bottom: 0;
+    z-index: -1;
+    max-width: 100%;
+    opacity: .25;
+    width: 100%;
+    height: 300px;
+    background: no-repeat center center;
+    background-size: cover;
+  }
+  .main {
+    text-align: center;
+
+    p {
+      text-align: right;
+      a {
+        color: $interactive;
+        font-size: .9em;
+        background-color: $black;
+        padding: 0.2em 0.6em;
+      }
     }
+  }
+  .wrap-flex {
+    background: $black;
+
+    .flex-item {
+      p span {
+        font-size: 3em;
+      }
+      span {
+        font-size: 2em;
+      }
+    }
+  }
 }
 
 
 // model box categories pages
 .wrap-flex {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 
-    -webkit-flex-flow: row wrap;
-    justify-content: space-between;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-between;
 
-    list-style:none;
+  list-style:none;
 }
 
 
 .flex-item {
-    color: #fff;
-    width: 200px;
-    margin-top: 10px;
+  color: #fff;
+  width: 200px;
+  margin-top: 10px;
 
-    font-weight: bold;
-    text-align: center; 
+  font-weight: bold;
+  text-align: center; 
 }
 
 // details
@@ -198,15 +202,15 @@ header h1 {
 // }
 
 .home{
-    h1{
-        text-align: center;
-    }
-    h3{
-        text-align: center;
-    }
-    div {
-        text-align: center;
-    }
+  h1{
+    text-align: center;
+  }
+  h3{
+    text-align: center;
+  }
+  div {
+    text-align: center;
+  }
 } 
 
 // .flex-list {
@@ -222,4 +226,34 @@ header h1 {
 //     border: 2px solid red;
 //     margin-top: 10px
 // }
+
+.ngMap{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+ng-map{
+    display: block;
+    height: 100%; 
+  }
+
+.map{
+  h1{
+    position: absolute;
+    bottom: 15px;
+    z-index: 1;
+    text-align: center;
+    left: 30%;
+  }
+  .linkToList{
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    top: 15px;
+  }
+}
 
