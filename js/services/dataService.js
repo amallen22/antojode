@@ -52,7 +52,7 @@ angular.module('mainApp')
       {id: 4, type: 'Cocteles', style: 'pe-is-f-cocktail-glass-3' },
       {id: 5, type: 'Copas', style: 'pe-is-f-highball-glass-2' }
         ]
-      }      
+      }
     ]
 
     return localData
