@@ -1,10 +1,12 @@
 <div class="detail">
+	<a class="link" href="#!categories/{{categoryId}}/map">To map</a>
 	<!-- <div class="bg-main" ng-style="{'ba ckground-image':'url({{venueDetail.bestPhoto.prefix}}original{{venueDetail.bestPhoto.suffix}})'}"></div>-->	<div class="bg-main" ng-style="{'background-image': 'url('+ imgUrl + ')'}"></div>
+	
+		
 	<section class="container">
 		<div class="main">
 			<h1>{{venueDetail.name}}</h1>
 			<h3>{{venueDetail.categories[0].name}}</h3>
-			<p><a class="link" href="#!/categories/{{catId}}/map/{{subId}}">To map</a></p>
 		</div>
 		<div class="wrap-flex">
 			<div class="flex-item">
@@ -26,8 +28,11 @@
 					</h4>
 				</div>
 				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-					<div class="panel-body" ng-repeat="box in attGroups">
-						<p >{{ box.items[0].displayName }}: {{ box.items[0].displayValue }}</p>
+					<div class="panel-body flexBox services">
+						<div ng-repeat="box in attGroups">
+							<p>{{ box.items[0].displayName }}</p>
+							<p><strong>{{ box.items[0].displayValue }}</strong></p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -40,8 +45,9 @@
 					</h4>
 				</div>
 				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-					<div class="panel-body" ng-repeat="box in attGroups">
-						<p >{{ box.items[0].displayName }}: {{ box.items[0].displayValue }}</p>
+					<div class="panel-body tips" ng-repeat="tip in itemsTips">
+						<em>"{{ tip.text }}"</em>
+						<p>By: {{ tip.user.firstName }} {{tip.user.lastName}}</p>
 					</div>
 				</div>
 			</div>
@@ -54,10 +60,15 @@
 					</h4>
 				</div>
 				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-					<div class="panel-body" ng-repeat="box in attGroups">
-						<p>{{ box.items[0].displayName }}: {{ box.items[0].displayValue }}</p>
+
+					<!-- ng-repeat="images in imgGalleryUrl" -->
+					<div class="panel-body flexBox">
+						<div class="bg-gal" ng-hide="!imgGalPre.length" ng-repeat="img in imgGalPre">
+							<img ng-src="{{ img.prefix }}original{{img.suffix }}">
+							<span>By: {{ img.user.firstName }} {{img.user.lastName}}</span>
+						</div>
 					</div>
-				</div>
+ 				</div>
 			</div>
 		</div>
 

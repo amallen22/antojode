@@ -28,27 +28,29 @@ angular.module('mainApp')
       {
         id: 0,
         title: 'Comer',
-        style: 'pe-is-f-bread-1',
+        style: 'pe-is-f-flatware-1',
         subCategory: [
-      {id: 0, type: 'Carne', style: 'pe-is-f-donut-1' },
-      {id: 1, type: 'Pescado', style: 'pe-is-f-sandwich' },
-      {id: 2, type: 'BBQ', style: 'pe-is-f-donut-1' },
-      {id: 3, type: 'Tapas', style: 'pe-is-f-donut-1' },
-      {id: 4, type: 'Take Away', style: 'pe-is-f-donut-1' },
-      {id: 5, type: 'Brunch', style: 'pe-is-f-donut-1' }
+
+      {id: 0, type: 'Carne', style: 'pe-is-f-steak-2' },
+      {id: 1, type: 'Pescado', style: 'pe-is-f-fish-2' },
+      {id: 2, type: 'BBQ', style: 'pe-is-f-barbecue-2' },
+      {id: 3, type: 'Tapas', style: 'pe-is-f-meat-tenderizer' },
+      {id: 4, type: 'Take Away', style: 'pe-is-f-cloche-hand' },
+      {id: 5, type: 'Brunch', style: 'pe-is-f-piece-of-cake-2' }
+
         ]
       },
       {
         id: 1,
         title: 'Beber',
-        style: 'pe-is-f-flatware-1',
+        style: 'pe-is-f-bottle',
         subCategory: [
-      {id: 0, type: 'Cafe y té', style: 'pe-is-f-milk-2' },
-      {id: 1, type: 'Smoothie', style: 'pe-is-f-fish-1' },
+      {id: 0, type: 'Cafe y té', style: 'pe-is-f-cup-coffee-hot-2' },
+      {id: 1, type: 'Smoothie', style: 'pe-is-f-thermal-cup-3' },
       {id: 2, type: 'Batidos', style: 'pe-is-f-steak-2' },
-      {id: 3, type: 'Vermut', style: 'pe-is-f-pepper' },
-      {id: 4, type: 'Cocteles', style: 'pe-is-f-sushi-2' },
-      {id: 5, type: 'Copas', style: 'pe-is-f-donut-1' }
+      {id: 3, type: 'Vermut', style: 'pe-is-f-champagne-glass-2-f' },
+      {id: 4, type: 'Cocteles', style: 'pe-is-f-cocktail-glass-3' },
+      {id: 5, type: 'Copas', style: 'pe-is-f-whisky-glass-1' }
         ]
       }      
     ]
