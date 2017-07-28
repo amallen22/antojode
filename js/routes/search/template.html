@@ -1,11 +1,14 @@
-<h1>{{section}}</h1>
-<form>
-	<input ng-model="getSearch" type="text">
-	<button ng-click="searchClick(getSearch)">icono</button>
-</form>
+<div class="search">
+  <!--   <h1>{{section}}</h1> -->
+  <div class="container">
+    <form>
+      <div>
+        <input ng-model="getSearch" type="text" placeholder="Tengo antojo de..." autofocus="autofocus"/>
+        <button id="searchMeal" ng-click="searchClick(getSearch)" ><span class="pe-is-f-lollipop-1"></span></button>
+      </div>
+    </form>
 
-<div class="container">
-    <div>
+    <div id="map-container" class="map-hide">
       <ng-map default-style="false" center="{{ll}}" zoom="13">
         <!-- comment MARKER WITH ON-CLICK EVENT AND DINAMIC POSITION FROM POSITION itemS-->
 
@@ -24,3 +27,4 @@
     </div>
 
   </div>
+</div>

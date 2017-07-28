@@ -1,9 +1,8 @@
 angular.module('mainApp')
-.config(function($routeProvider){
-	$routeProvider
+.config(function ($routeProvider) {
+  $routeProvider
 	.when('/search', {
-		templateUrl: 'js/routes/search/template.html',
-		controller: 'searchController'
-	})
+  templateUrl: 'js/routes/search/template.html',
+  controller: 'searchController'
 })
-
+})

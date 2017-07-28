@@ -12,9 +12,12 @@
 				<p>{{venueDetail.likes.count}} valoraciones</p>
 				<p><span>{{venueDetail.rating}}</span>/10</p>
 			</div>
-			<div class="flex-item">
+			<div ng-show="venueDetail.popular.hours" class="flex-item">
 				<p>{{venueDetail.popular.status}}</p>
 				<p>{{venueDetail.popular.hours}}</p>
+			</div>
+			<div class="flex-item">
+				<p>{{venueDetail.location.address}}</p>
 			</div>
 		</div>
 		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
