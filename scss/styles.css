@@ -162,7 +162,7 @@ ng-map {
 /*Koala trouble*/
 
 
-h1 {
+nav h1 {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -301,6 +301,72 @@ img {
       margin-top: 8px;
       margin-bottom: 0;
     }
+
+    .search form {
+      text-align: center;
+      margin-bottom: 30px; 
+      overflow: hidden;
+
+    }
+    .search form div {
+      margin: 0 auto;
+    }
+
+    .search form input {
+      border: none;
+      border-bottom: 2px solid #000;
+      color: #000000;
+      padding: 5px;
+      font-size: 1.5em; 
+      background-color: transparent;
+      float: left;
+      width: 80%;
+    }
+    .search form input:focus {
+      box-shadow: none;
+      border: none;
+      border-bottom: 2px solid #000;
+      outline-offset: 0px;
+      outline: -webkit-focus-ring-color auto 0px;
+    }
+    .search form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: rgba(0,0,0, .35);
+      letter-spacing: -0.5px;
+    }
+    .search form input::-moz-placeholder { /* Firefox 19+ */
+      color: rgba(0,0,0, .35);
+      letter-spacing: -0.5px;
+    }
+    .search form input:-ms-input-placeholder { /* IE 10+ */
+      color: rgba(0,0,0, .35);
+      letter-spacing: -0.5px;
+    }
+    .search form input:-moz-placeholder { /* Firefox 18- */
+      color: rgba(0,0,0, .35);
+      letter-spacing: -0.5px;
+    }
+    .search form button {
+      background-color: transparent;
+      border: none; 
+      display: block;
+      width: 45px;
+      height: 45px;
+      float: left;
+      width: 20%;
+    }
+    .search form button span {
+      font-size: 2.5em;
+      color: #000000;
+    }
+    .search .map-hide {
+      opacity: 0;
+    }
+    .displayHide {
+      display: none;
+    }
+
+
+      
 
 
 footer {

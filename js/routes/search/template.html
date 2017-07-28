@@ -1,4 +1,30 @@
-<form action="#">
-	<input type="text"/>
-	<button>icono</button>
-</form>
+<div class="search">
+  <!--   <h1>{{section}}</h1> -->
+  <div class="container">
+    <form>
+      <div>
+        <input ng-model="getSearch" type="text" placeholder="Tengo antojo de..." autofocus="autofocus"/>
+        <button id="searchMeal" ng-click="searchClick(getSearch)" ><span class="pe-is-f-lollipop-1"></span></button>
+      </div>
+    </form>
+
+    <div id="map-container" class="map-hide">
+      <ng-map default-style="false" center="{{ll}}" zoom="13">
+        <!-- comment MARKER WITH ON-CLICK EVENT AND DINAMIC POSITION FROM POSITION itemS-->
+
+        <div ng-repeat="item in items">
+          <marker position="current" animation="Animation.BOUNCE" centered="true"></marker>
+          <marker id="item{{$index}}" animation="DROP" position="{{ item.venue.location.lat}}, {{item.venue.location.lng}}"  on-click="map.showInfoWindow('info{{$index}}')"></marker>
+
+          <!-- SHOW INFO WHEN CLICK ON ICON -->
+          <info-window id="info{{$index}}">
+            <div>
+              <a ng-href="#!/detail/{{item.venue.id}}"><strong>{{item.venue.name}}</strong></a>
+            </div>
+          </info-window>
+        </div>
+      </ng-map>
+    </div>
+
+  </div>
+</div>
