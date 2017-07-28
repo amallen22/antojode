@@ -397,6 +397,7 @@ footer {
     font-size: 4em;
     line-height: 110%; 
   }
+
   a:link {
     color: #000;
     text-decoration: none;
@@ -408,4 +409,5 @@ footer {
   a.link {    
     font-size: 1.1em;
   }  
+
 }

@@ -1,12 +1,19 @@
 angular.module('mainApp')
 
-.controller('detailController', function ($scope, $routeParams, dataService) {
+.controller('detailController', function ($rootScope, $scope, $routeParams, dataService) {
   var detId = $routeParams.detId
   $scope.section = 'Antojo de '
+  var verify = $rootScope.catId
+  console.log(verify)
+  if(!isNaN(verify)){
+    console.log('hi')
+    $('#btn-map').removeClass('displayHide')
+  }else{
+    $('#btn-search').removeClass('displayHide')
+  }
 
   dataService.getVenueDetails(detId)
     .then(function (detId) {
-      console.log(detId.data.response.venue)
       if (detId.data.response.venue.bestPhoto) {
         var imgPre = detId.data.response.venue.bestPhoto.prefix
         var imgSuf = 'original' + detId.data.response.venue.bestPhoto.suffix
