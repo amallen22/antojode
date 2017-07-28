@@ -1,10 +1,10 @@
 angular.module('mainApp')
-.controller('mapController', function ($location, $scope, $routeParams, dataService, localData) {
+.controller('mapController', function ($rootScope, $scope, $routeParams, dataService, localData) {
   var catId = $routeParams.catId
   var subId = $routeParams.subId
-  $scope.catId = $routeParams.catId
-  $scope.subId = $routeParams.subId
-  var urlDetails = 'categories/'+catId+'/map/'+subId+'/detail/'
+  $rootScope.catId = $routeParams.catId
+  $rootScope.subId = $routeParams.subId
+ 
 
   var querySubCategory = localData[catId].subCategory[subId].type
   // esta query tiene que llegar al dataService para recojer parametro
@@ -25,9 +25,4 @@ angular.module('mainApp')
       $scope.items = config.data.response.groups[0].items
     })
   })
-
-  $scope.showVenue = function(item) {
-    $location.path(urlDetails + item.venue.id);
-  };
-
 })
