@@ -10,6 +10,7 @@ This repository contains a Mobile App build with HTML, SASS and Angular at [Skyl
 
 [Antojo de!](https://amallen22.github.io/antojode) use the [Foursquare API](https://developer.foursquare.com/) to search for a restaurant or a type of restaurant in your own location. All results will be shown indicating the name of the restaurant, the address and the type of restaurant to which it belongs.
 
+
 ![Screenshot](img/screenshot.png)
 
 
