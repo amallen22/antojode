@@ -1,12 +1,19 @@
 angular.module('mainApp')
 
-.controller('detailController', function ($scope, $routeParams, dataService) {
+.controller('detailController', function ($rootScope, $scope, $routeParams, dataService) {
   var detId = $routeParams.detId
   $scope.section = 'Antojo de '
+  var verify = $rootScope.catId
+  console.log(verify)
+  if(!isNaN(verify)){
+    console.log('hi')
+    $('#btn-map').removeClass('displayHide')
+  }else{
+    $('#btn-search').removeClass('displayHide')
+  }
 
   dataService.getVenueDetails(detId)
     .then(function (detId) {
-      console.log(detId.data.response.venue)
       if (detId.data.response.venue.bestPhoto) {
         var imgPre = detId.data.response.venue.bestPhoto.prefix
         var imgSuf = 'original' + detId.data.response.venue.bestPhoto.suffix
@@ -36,8 +43,7 @@ angular.module('mainApp')
       // var imgGalPre = img.prefix
       // var imgGalSuf = '' + img.suffix
 
-      console.log(detId.data)
-      console.log(detId.data.response.venue.tips.groups[0].items)
+      
       // console.log(detId.data.response.venue.photos.groups[0].items[0])
       // console.log(detId.data.response.venue.photos.groups[0].items[0].prefix)
       // console.log(detId.data.response.venue.photos.groups[0].items[0].suffix)
