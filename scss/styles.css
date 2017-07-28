@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Alef");
+@import url("https://fonts.googleapis.com/css?family=Alef:400,700");
 body {
   background-color: #ffb399;
   font-family: 'Alef', sans-serif;
@@ -25,7 +25,10 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center; }
 
 h1 {
-  font-size: 3em; }
+  font-size: 3.5em;
+  letter-spacing: -2px;
+  line-height: 100%; 
+}
 
 ul {
   margin: 0 auto;
@@ -75,9 +78,8 @@ header h1 a:link {
     background: no-repeat center center;
     background-size: cover; }
   .detail .main {
-    text-align: center; }
-    .detail .main p {
-      text-align: right; }
+    text-align: center; 
+  }
 
 .wrap-flex {
   background: #000000; }
@@ -100,7 +102,7 @@ header h1 a:link {
   list-style: none; }
 
 .flex-item {
-  color: #fff;
+  color: #ffffbf;
   width: 200px;
   margin-top: 10px;
   font-weight: bold;
@@ -139,12 +141,154 @@ ng-map {
   right: 15px;
   top: 15px; }
 .map .footerSection {
-  position: absolute;
+/*  position: absolute;
   bottom: 15px;
   z-index: 1;
   text-align: center;
   left: 35%;
   background-color: #ffb399;
-  padding: 10px; }
+  padding: 10px; */
+}
+  
+.map .footerSection h1 {
+  margin-top: 0;
+}
 
 /*# sourceMappingURL=styles.css.map */
+
+/*Koala trouble*/
+
+a:link {
+  padding: 0.3em 0.6em .4em;
+}
+
+.flexBox {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: row wrap;
+        justify-content: center;
+
+        
+    }
+.bg-gal {
+  max-width: 96%;
+  width: 100%; 
+  background: #000;
+  margin: 3%;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  align-items: center;
+  position: relative;
+}
+.bg-gal span{
+  color: #ffffbf;
+  position: absolute;
+  bottom:  2%;
+  right: 2%;
+  opacity: 0;
+  padding: 4px;
+  transition: all .2s ease-in-out;
+  background: #000;
+}
+.bg-gal:hover span{
+  opacity: 1; 
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+.detail {
+  position: relative;
+}
+.detail > a {
+      position: absolute;
+      right: 15px;
+      top: -82px; 
+    }
+    .detail .bg-main {
+      height: 293px;
+    }
+    .detail .main{
+      padding: 0 15px 30px 15px;
+    }
+    .detail h1 {
+      margin-top:0;
+      margin-bottom: 5px;
+    }
+    .detail h3 {
+      margin-top:0;
+      margin-bottom:0;
+    }
+    .detail .tips {
+      text-align: center;
+    }
+    .detail .tips em {
+      font-size: 1.2em;
+      line-height: 1.2em;
+      margin-bottom: 8px;
+      display: block;
+      letter-spacing: .15px;
+    }
+    .detail .services div {
+      text-align: center;
+      width: 46%;
+      padding: 2%;
+    }
+    .detail .services div p {
+      margin-bottom: 0;
+      font-size: 1.2em;
+      line-height: 1.2em;
+    }
+    /* reset accordion */
+  
+    .panel-group {
+      margin-top: 20px;
+    }
+    .panel-default>.panel-heading {
+      color: #ffffbf;
+      background-color: #000000;
+      border: none;
+      border-radius: 0;
+    }
+    .panel-default>.panel-heading h4 a:link {
+      transition: all .2s ease-in-out;  
+    }
+    .panel-default>.panel-heading h4 a:hover {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .panel-default {
+      border: none;
+      border-radius: 0;
+      -webkit-border-radius: 0;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+    }
+    .panel-group .panel {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    .panel-group .panel+.panel {
+        margin-top: 1px;
+    }
+
+@media (max-width: 600px){
+  .detail h1 {
+    margin-top: 0;
+  }
+}
+@media (min-width: 600px){
+  .bg-gal {
+      max-width: 46%;
+      margin: 2%;
+  }
+  h1 {
+    font-size: 4em;
+    line-height: 110%; 
+  }
+}

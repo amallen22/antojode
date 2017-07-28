@@ -1,10 +1,9 @@
 <div class="detail">
-	<!-- <div class="bg-main" ng-style="{'ba ckground-image':'url({{venueDetail.bestPhoto.prefix}}original{{venueDetail.bestPhoto.suffix}})'}"></div>-->	<div class="bg-main" ng-style="{'background-image': 'url('+ imgUrl + ')'}"></div>
+	<a class="link" href="#!/categories/{{catId}}/map/{{subId}}">To map</a>
 	<section class="container">
 		<div class="main">
 			<h1>{{venueDetail.name}}</h1>
 			<h3>{{venueDetail.categories[0].name}}</h3>
-			<p><a ng-href="#!/categories/{{catId}}/map/{{subId}}">To map</a></p>
 		</div>
 		<div class="wrap-flex">
 			<div class="flex-item">
@@ -13,14 +12,59 @@
 			</div>
 			<div class="flex-item">
 				<p>{{venueDetail.popular.status}}</p>
-				<!-- <p>{{venueDetail.popular.hours}}</p> -->
+				<p>{{venueDetail.popular.hours}}</p>
 			</div>
 		</div>
-
-	</section>
-	<div class="wrap-flex">
-			<div ng-repeat="attributes in venueDetail" class="flex-item">
-				<p>{{ attributes.groups }}</p>
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<h4 class="panel-title">
+						<a role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							SERVICIOS
+						</a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					<div class="panel-body flexBox services">
+						<div ng-repeat="box in attGroups">
+							<p>{{ box.items[0].displayName }}</p>
+							<p><strong>{{ box.items[0].displayValue }}</strong></p>
+						</div>
+					</div>
+				</div>
 			</div>
-	</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingTwo">
+					<h4 class="panel-title">
+					<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							TIPS
+						</a>
+					</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					<div class="panel-body tips" ng-repeat="tip in itemsTips">
+						<em>"{{ tip.text }}"</em>
+						<p>By: {{ tip.user.firstName }} {{tip.user.lastName}}</p>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingThree">
+					<h4 class="panel-title">
+						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							FOTOS
+						</a>
+					</h4>
+				</div>
+				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					<div class="panel-body flexBox">
+						<div class="bg-gal" ng-hide="!imgGalPre.length" ng-repeat="img in imgGalPre">
+							<img ng-src="{{ img.prefix }}original{{img.suffix }}">
+							<span>By: {{ img.user.firstName }} {{img.user.lastName}}</span>
+						</div>
+					</div>
+ 				</div>
+			</div>
+		</div>
+	</section>
 </div>
