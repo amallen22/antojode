@@ -140,6 +140,7 @@ ng-map {
   z-index: 1;
   right: 15px;
   top: 15px; }
+
 .map .footerSection {
 /*  position: absolute;
   bottom: 15px;
@@ -276,6 +277,21 @@ img {
     .panel-group .panel+.panel {
         margin-top: 1px;
     }
+
+
+footer {
+  background-color: #000000;
+  color: #ffffbf;
+  padding: 3%;
+  text-align: center;
+}
+@media (min-height: 600px) {
+  footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
 
 @media (max-width: 600px){
   .detail h1 {

@@ -1,5 +1,6 @@
 <div class="detail">
 	<a class="link" href="#!/categories/{{catId}}/map/{{subId}}">To map</a>
+	<div class="bg-main" ng-style="{'background-image': 'url('+ imgUrl + ')'}"></div>
 	<section class="container">
 		<div class="main">
 			<h1>{{venueDetail.name}}</h1>
@@ -57,6 +58,8 @@
 					</h4>
 				</div>
 				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+
+					<!-- ng-repeat="images in imgGalleryUrl" -->
 					<div class="panel-body flexBox">
 						<div class="bg-gal" ng-hide="!imgGalPre.length" ng-repeat="img in imgGalPre">
 							<img ng-src="{{ img.prefix }}original{{img.suffix }}">
