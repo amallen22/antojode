@@ -7,7 +7,7 @@ body {
 a:link {
   color: #000;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.3em;
   transition: all .2s ease-in-out; }
 a:hover {
   transform: scale(1.1);
@@ -135,11 +135,13 @@ ng-map {
   display: block;
   height: 100%; }
 
+.list .linkToMap,
 .map .linkToList {
   position: absolute;
   z-index: 1;
   right: 15px;
-  top: 15px; }
+  top: 26px;
+}
 
 .map .footerSection {
 /*  position: absolute;
@@ -159,6 +161,12 @@ ng-map {
 
 /*Koala trouble*/
 
+
+h1 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
 a:link {
   padding: 0.3em 0.6em .4em;
 }
@@ -278,18 +286,34 @@ img {
         margin-top: 1px;
     }
 
+    .list li {
+      width: 100%;
+      padding: 25px;
+    }
+    .list li a {
+      width: 100%;
+      padding: 0;
+    }
+    .list li h3 {
+      font-size: 28px;
+    }
+    .list li h5 {
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
 
 footer {
   background-color: #000000;
   color: #ffffbf;
   padding: 3%;
   text-align: center;
+    /*position: fixed;
+    bottom: 0;*/
+    width: 100%;
 }
 @media (min-height: 600px) {
   footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
   }
 }
 
@@ -307,4 +331,15 @@ footer {
     font-size: 4em;
     line-height: 110%; 
   }
+  a:link {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+  ul li {
+    width: 33%;
+  }
+  a.link {    
+    font-size: 1.1em;
+  }  
 }
