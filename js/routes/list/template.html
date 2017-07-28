@@ -4,7 +4,7 @@
         <p><a ng-href="#!/categories/{{catId}}/map/{{subId}}" class="link">To map</a></p>
         <ul>
             <li ng-repeat="item in items" >
-                <a ng-href="#!/detail/{{item.venue.id}}">
+                <a ng-href="#!/categories/{{catId}}/map/{{subId}}/detail/{{item.venue.id}}">
                     <h3>{{ item.venue.name }}</h3>
                     <h5>{{ item.venue.categories[0].pluralName }}</h5>
                 </a>
@@ -12,3 +12,4 @@
         </ul>
     </div>
 </div>
+
