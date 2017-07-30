@@ -1,7 +1,10 @@
 <div class="map">
 
   <div class="container">
-    <div class="footerSection"><h1>{{ section }}</h1></div>
+    <div class="headSection">
+    <h1>{{ section }}</h1>
+    <p>Haz click en el marker para ver los detalles</p>
+    </div>
     <div class="ngMap">
       <ng-map default-style="false" center="{{ll}}" zoom="13">
         <!-- comment MARKER WITH ON-CLICK EVENT AND DINAMIC POSITION FROM POSITION itemS-->
