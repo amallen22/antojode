@@ -1,14 +1,17 @@
 <div class="map">
 
   <div class="container">
-    <div class="footerSection"><h1>{{ section }}</h1></div>
+    <div class="headSection">
+    <h1>{{ section }}</h1>
+    <p>Haz click en el marker para ver los detalles</p>
+    </div>
     <div class="ngMap">
       <ng-map default-style="false" center="{{ll}}" zoom="13">
         <!-- comment MARKER WITH ON-CLICK EVENT AND DINAMIC POSITION FROM POSITION itemS-->
         <div class="linkToList"><a class="link" href="#!/categories/{{catId}}/subcategory/{{subId}}">To list</a></div>
 
         <div ng-repeat="item in items">
-          <marker position="current" animation="Animation.BOUNCE" centered="true"></marker>
+          <marker position="current" animation='BOUNCE' centered="true"></marker>
           <marker id="item{{$index}}" animation="DROP" position="{{ item.venue.location.lat}}, {{item.venue.location.lng}}"  on-click="map.showInfoWindow('info{{$index}}')"></marker>
 
           <!-- SHOW INFO WHEN CLICK ON ICON -->

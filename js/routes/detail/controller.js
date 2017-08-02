@@ -5,10 +5,10 @@ angular.module('mainApp')
   $scope.section = 'Antojo de '
   var verify = $rootScope.catId
   console.log(verify)
-  if(!isNaN(verify)){
+  if (!isNaN(verify)) {
     console.log('hi')
     $('#btn-map').removeClass('displayHide')
-  }else{
+  } else {
     $('#btn-search').removeClass('displayHide')
   }
 
@@ -28,9 +28,6 @@ angular.module('mainApp')
 
       $scope.venueDetail = detId.data.response.venue
 
-      // bg main image header
-      // $scope.imgUrl = imgUrl
-
       // ng-repeat services in accordion
       $scope.attGroups = detId.data.response.venue.attributes.groups
 
@@ -39,11 +36,6 @@ angular.module('mainApp')
 
       // ng-repeat images in gallery accordion
       $scope.imgGalPre = detId.data.response.venue.photos.groups[0].items
-
-  // testing
-      // imgGal = img.user.firstName
-      // var imgGalPre = img.prefix
-      // var imgGalSuf = '' + img.suffix
 
       // console.log(detId.data)
       // console.log(detId.data.response.venue.tips.groups[0].items)
