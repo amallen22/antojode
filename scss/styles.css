@@ -44,7 +44,7 @@ ul {
       text-decoration: none;
       color: black; }
 
-header h1 a:link {
+header h1 a {
   background: url("../img/logo_antojo-de.png") no-repeat center center;
   background-size: 100%;
   display: block;

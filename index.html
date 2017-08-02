@@ -12,9 +12,9 @@
 <body>
 	<header>
 		<div class="container">
-			<nav>
+			<nav ng-controller="index">
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<h1><a ng-href="#!/">Antojo de</a></h1>
+				<h1><a ng-click="resetParams()">Antojo de</a></h1>
 			</nav>
 		</div><!-- /.container -->
 	</header>
@@ -45,6 +45,9 @@
 
 	<!-- dataServices -->
 	<script src="js/services/dataService.js"></script>
+
+	<!-- home-controller -->
+	<script src="js/home-controller/controller.js"></script>
 
 	<!-- list -->
 	<script src="js/routes/list/controller.js"></script>
