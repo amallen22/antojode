@@ -104,6 +104,30 @@ ul li {
     position: relative;
   }
 
+
+header h1 a {
+  background: url("../img/logo_antojo-de.png") no-repeat center center;
+  background-size: 100%;
+  display: block;
+  height: 72px;
+  margin: 0 auto;
+  text-indent: -9999px;
+  width: 150px; }
+
+[class^="pe-is-f-"],
+[class*=" pe-is-f-"] {
+  font-size: 5.5em;
+  display: block;
+  margin-bottom: 0.1em; }
+
+.home a:link,
+.category a:link {
+  padding: 40px;
+  text-align: center; }
+
+.detail {
+  position: relative; }
+
   .detail .bg-main {
     position: absolute;
     top: -102px;
@@ -563,7 +587,7 @@ ul li {
       font-size: 5em;
     }
     footer {
-      position: fixed;
+      /*position: fixed;*/
       bottom: 0;
     }
   }
