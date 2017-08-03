@@ -212,6 +212,7 @@ ul li {
   .map .headSection p {
     background-color: #ffb399;
     padding: 5px;
+    display: inline;
   }
 
 
