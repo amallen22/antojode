@@ -11,7 +11,7 @@
         <div class="linkToList"><a class="link" href="#!/categories/{{catId}}/subcategory/{{subId}}">To list</a></div>
 
         <div ng-repeat="item in items">
-          <marker position="current" icon="../../img/me.png" centered="true"></marker>
+          <marker position="current" icon="../img/me.png" centered="true"></marker>
 
           <marker id="item{{$index}}" animation="DROP" position="{{ item.venue.location.lat}}, {{item.venue.location.lng}}"  on-click="map.showInfoWindow('info{{$index}}')"></marker>
 
